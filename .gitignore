@@ -1,0 +1,5 @@
+agent3/venv/
+agent3/output/
+agent3/__pycache__/
+*.pyc
+.cache/
