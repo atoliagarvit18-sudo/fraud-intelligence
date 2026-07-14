@@ -1,0 +1,13 @@
+opencv-python-headless>=4.10.0
+numpy>=1.26.0
+scikit-learn>=1.5.0
+imagehash>=4.3.0
+Pillow>=10.0.0
+folium>=0.17.0
+pandas>=2.2.0
+
+# Only needed if upgrading to the production EfficientNet-B0 pipeline
+# (see train_efficientnet_colab.py) -- not required for the current
+# classical-feature classifiers.
+# torch>=2.0.0
+# torchvision>=0.15.0

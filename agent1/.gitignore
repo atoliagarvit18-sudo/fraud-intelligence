@@ -1,0 +1,21 @@
+# Large raw data -- NOT committed, see DATA.md for download link
+genuine/
+fake/
+normalized/
+normalized_test/
+raw/
+reference_crops/
+unzip_temp/
+pending_identification/
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+
+# Keep these despite the broad excludes above
+!sample_data/
+!models/*.pkl
