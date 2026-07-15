@@ -1,0 +1,802 @@
+[
+    {
+        "type": "KYC Scam",
+        "text": "Namaste, sir/madam, this is an official call from RBI. We are conducting a KYC check for your bank account. Please provide your PAN card number and date of birth."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello, this is from UIDAI. We need to verify your Aadhaar details to confirm your identity. Can you please share your Aadhaar number and registered mobile number?"
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Good day, sir/madam. This is Axis Bank. We are upgrading our KYC policy and need your help to update your details. Please provide your PAN card number and address proof."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Respected customer, this is a call from your bank. We require your KYC documents to process your loan application. Please send us your ID proof and address proof."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Welcome, sir/madam. This is a call from RBI to conduct a KYC audit. Can you please provide your bank account number and IFSC code?"
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello, this is from a government agency. We need to verify your KYC details to prevent financial fraud. Please share your PAN card number and bank account number."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Namaste, sir/madam. This is a call from your bank to update your KYC details. Please provide your ID proof and address proof."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "This is a call from RBI to inform you about a new KYC policy. We need your help to update your details. Please provide your PAN card number and date of birth."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello, this is a call from UIDAI to verify your Aadhaar details. Can you please share your Aadhaar number and registered mobile number?"
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Respected customer, this is a call from your bank to conduct a KYC check. Please provide your bank account number and IFSC code."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Good day, sir/madam. This is a call from a government agency to verify your KYC details. Please share your PAN card number and bank account number."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello, this is a call from UIDAI to update your Aadhaar details. Please share your Aadhaar number and registered mobile number."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Respected customer, this is a call from a government agency to verify your KYC details. Please share your PAN card number and bank account number."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Good day, sir/madam. This is a call from RBI to inform you about a new KYC policy. We need your help to update your details. Please provide your PAN card number and date of birth."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Welcome, sir/madam. This is a call from your bank to conduct a KYC check. Please provide your bank account number and IFSC code."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Namaste, sir/madam. This is a call from RBI to conduct a KYC audit. Can you please provide your bank account number and IFSC code?"
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello, this is a call from a government agency to update your KYC details. Please share your PAN card number and bank account number."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Respected customer, this is a call from your bank to update your KYC details. Please provide your ID proof and address proof."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Good day, sir/madam. This is a call from UIDAI to confirm your Aadhaar details. Can you please share your Aadhaar number and registered mobile number?"
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Welcome, sir/madam. This is a call from RBI to conduct a KYC check. Please provide your bank account number and IFSC code."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello, this is a call from a government agency to verify your KYC details. Please share your PAN card number and bank account number."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello, I'm calling from the Reserve Bank of India, and we need to update your KYC details. Can you please provide your PAN card number?"
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Good day, we are conducting a random survey on KYC compliance. Can you give me your Aadhaar card number for verification purposes?"
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello, I'm calling from the government's KYC department. We need to verify your identity for new regulations. Can you provide your name, date of birth, and address?"
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello, we are conducting a KYC audit and require your PAN card details. Can you please provide me with your PAN card number for verification?"
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hi, this is a call from your bank. We need to update your KYC details due to new regulations. Can you please confirm your name, date of birth, and address?"
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Good day, we are conducting a survey on KYC compliance. Can you please provide me with your Aadhaar card details for verification purposes?"
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello, I'm calling from the KYC department. We require you to confirm your KYC details for security reasons. Please provide me with your account number and PAN card details."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hi, this is a call from your bank. We need to verify your identity for new regulations. Can you provide your name, date of birth, and address?"
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello, we are conducting a random survey on KYC compliance. Can you give me your PAN card number for verification purposes?"
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Good day, we are conducting a KYC audit and require your Aadhaar card details. Can you please provide me with your Aadhaar card number for verification?"
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello, this is a call from the KYC department. We need to update your KYC details. Can you please confirm your name, date of birth, and address?"
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hi, this is a call from your bank. We need to verify your identity for security reasons. Can you provide me with your PAN card details?"
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello, we are conducting a survey on KYC compliance. Can you please provide me with your name, date of birth, and address for verification purposes?"
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Good day, we are conducting a KYC audit and require your PAN card details. Can you please provide me with your PAN card number for verification?"
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hi, this is a call from your bank. We need to verify your identity for new regulations. Can you provide your name, date of birth, and Aadhaar card details?"
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello, we are conducting a random survey on KYC compliance. Can you give me your PAN card details for verification purposes?"
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Good day, we are conducting a KYC audit and require your name, date of birth, and address for verification purposes. Can you please provide your Aadhaar card details?"
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hi, this is a call from your bank. We need to verify your identity for security reasons. Can you provide your Aadhaar card details and PAN card number?"
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello, we are conducting a survey on KYC compliance. Can you please provide me with your PAN card details and account number for verification purposes?"
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Good day, we are conducting a KYC audit and require your name, date of birth, and PAN card number for verification purposes."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello, this is a call from the KYC department. We need to verify your identity for new regulations. Can you provide your Aadhaar card details and PAN card details?"
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hi, this is a call from your bank. We need to update your KYC details. Can you please confirm your account number, PAN card details, and Aadhaar card details."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello, this is a representative from the National Pension System. We need to verify your identity to ensure you're eligible for the scheme."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Good afternoon, you're being contacted by the Income Tax Department. We need to confirm your PAN card details for the new tax season."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "This is a call from the RBI. We're conducting a routine KYC audit and need your Aadhaar number to complete the process."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hi, we're from the State Bank of India. We're checking your account details to ensure compliance with the new KYC regulations."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello, this is a representative from the Central Board of Direct Taxes. We need to verify your address to update our records."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "We're from the Ministry of Corporate Affairs. We need to confirm your business details for the upcoming financial year."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hi, we're conducting a routine KYC check on behalf of the Reserve Bank of India. Please share your bank account details with us."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "This is a call from the Goods and Services Tax Department. We need to verify your GST registration to process the refund."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello, we're from the Passport Seva Kendra. We need to confirm your passport details to update our records."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hi, we're conducting a KYC audit on behalf of the Enforcement Directorate. Please share your bank account details with us."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "This is a call from the Securities and Exchange Board of India. We need to verify your Demat account details to ensure compliance with the new regulations."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello, we're from the Directorate General of Goods and Services Tax Intelligence. We need to confirm your GST returns to update our records."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hi, we're conducting a routine KYC check on behalf of the Ministry of Finance. Please share your bank account details with us."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "This is a call from the Income Tax Tribunal. We need to verify your tax returns to process the refund."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello, we're from the National Stock Exchange. We need to confirm your Demat account details to ensure compliance with the new regulations."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hi, we're conducting a KYC audit on behalf of the National Housing Bank. Please share your bank account details with us."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "This is a call from the Reserve Bank of India. We need to verify your bank account details to update our records."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello, we're from the Securities and Exchange Board of India. We need to confirm your trading account details to ensure compliance with the new regulations."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hi, we're conducting a routine KYC check on behalf of the State Bank of India. Please share your bank account details with us."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "This is a call from the Central Electricity Regulatory Commission. We need to verify your electricity bills to process the refund."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello, we're from the National Payments Corporation of India. We need to confirm your bank account details to update our records."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hi, we're conducting a KYC audit on behalf of the Ministry of Corporate Affairs. Please share your company details with us."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "This is a call from the Directorate General of Central Excise Intelligence. We need to verify your excise returns to update our records."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello, we're from the Ministry of Finance. We need to confirm your tax returns to process the refund."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "This is a call from the Enforcement Directorate. We need to verify your bank account details to update our records."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello, this is Mr. Kumar from the Reserve Bank of India. We need to verify your KYC documents to prevent any fraudulent activities on your account. Can you please share your PAN card details with me?"
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Good evening, I'm calling from the Government of India's KYC Cell. We have some concerns regarding your KYC documents, and we need to update your information to prevent any issues with your Aadhaar card."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hi, this is Anil from the Income Tax Department. We are conducting a random audit and need to verify your KYC documents to ensure you're not involved in any tax evasion activities."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello, I'm calling from the RBI's KYC Verification Team. We need to confirm your bank account information to prevent any unauthorized transactions."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Good day, this is Rohan from the UIDAI. We're experiencing some technical issues with your Aadhaar card, and we need to update your KYC information to resolve the issue."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hi, I'm calling from the Ministry of Corporate Affairs. We need to verify your company's KYC documents to ensure compliance with the regulations."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello, this is Aarav from the SEBI KYC Cell. We need to update your KYC information to prevent any market manipulation activities."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Good evening, I'm calling from the RBI's Anti-Money Laundering Cell. We need to verify your KYC documents to prevent any suspicious transactions."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hi, this is Kunal from the NSDL. We're experiencing some technical issues with your PAN card, and we need to update your KYC information to resolve the issue."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello, I'm calling from the RBI's Financial Inclusion Team. We need to verify your KYC documents to ensure you're eligible for our financial inclusion programs."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Good day, this is Rohan from the CDSL. We need to update your KYC information to prevent any unauthorized transactions on your Demat account."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hi, I'm calling from the Government of India's KYC Enforcement Cell. We need to verify your KYC documents to prevent any tax evasion activities."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello, this is Aayushi from the RBI's KYC Verification Team. We need to confirm your bank account information to prevent any unauthorized transactions."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Good evening, I'm calling from the Ministry of Finance. We need to verify your KYC documents to ensure you're not involved in any financial irregularities."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hi, this is Kavish from the NSDL. We're experiencing some technical issues with your PAN card, and we need to update your KYC information to resolve the issue."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello, I'm calling from the RBI's Financial Stability Team. We need to verify your KYC documents to ensure you're not involved in any financial instability activities."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Good day, this is Riya from the CDSL. We need to update your KYC information to prevent any unauthorized transactions on your Demat account."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hi, I'm calling from the Government of India's KYC Cell. We have some concerns regarding your KYC documents, and we need to update your information to prevent any issues with your Aadhaar card."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello, this is Anushka from the RBI's KYC Verification Team. We need to confirm your bank account information to prevent any unauthorized transactions."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Good evening, I'm calling from the Ministry of Corporate Affairs. We need to verify your company's KYC documents to ensure compliance with the regulations."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hi, this is Vansh from the NSDL. We're experiencing some technical issues with your PAN card, and we need to update your KYC information to resolve the issue."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Good day, this is Sania from the CDSL. We need to update your KYC information to prevent any unauthorized transactions on your Demat account."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello, this is Aaradhya from the RBI's KYC Verification Team. We need to confirm your bank account information to prevent any unauthorized transactions."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello Sir, I am calling from Axis Bank, we need to verify your KYC details for security reasons, please provide me with your PAN card number and Aadhaar card number."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Good evening, I am calling from HDFC Bank, we are conducting a routine KYC check, please confirm your account number and date of birth."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Sir, this is SBI, we require your KYC documents to proceed with your loan application, kindly provide me with scanned copies of your ID and address proof."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello Sir, I am calling from ICICI Bank, we are upgrading our system and need your KYC information to ensure smooth transactions, please provide me with your account details."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Respected Sir, I am calling from Kotak Mahindra, we need to reverify your KYC to prevent any unauthorized transactions, please confirm your personal details."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Good morning, I am calling from PNB, we are conducting a random KYC check to ensure compliance, please provide me with your KYC documents."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Sir, this is Bank of India, we need your KYC information to process your loan application, please provide me with your employment details and ID proof."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello Sir, I am calling from IDBI Bank, we are upgrading our system and need your KYC information to ensure secure transactions, please provide me with your account details."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Respected Sir, I am calling from Canara Bank, we need to reverify your KYC to prevent any unauthorized transactions, please confirm your personal details."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Good evening, I am calling from Union Bank, we are conducting a routine KYC check, please provide me with your KYC documents."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Sir, this is Bank of Baroda, we need your KYC information to process your loan application, please provide me with your employment details and ID proof."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello Sir, I am calling from Dena Bank, we are upgrading our system and need your KYC information to ensure secure transactions, please provide me with your account details."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Respected Sir, I am calling from Central Bank, we need to reverify your KYC to prevent any unauthorized transactions, please confirm your personal details."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Good morning, I am calling from Oriental Bank, we are conducting a random KYC check to ensure compliance, please provide me with your KYC documents."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Sir, this is Syndicate Bank, we need your KYC information to process your loan application, please provide me with your employment details and ID proof."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello Sir, I am calling from Andhra Bank, we are upgrading our system and need your KYC information to ensure secure transactions, please provide me with your account details."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Respected Sir, I am calling from Corporation Bank, we need to reverify your KYC to prevent any unauthorized transactions, please confirm your personal details."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Good evening, I am calling from Allahabad Bank, we are conducting a routine KYC check, please provide me with your KYC documents."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Sir, this is UCO Bank, we need your KYC information to process your loan application, please provide me with your employment details and ID proof."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello Sir, I am calling from Indian Overseas Bank, we are upgrading our system and need your KYC information to ensure secure transactions, please provide me with your account details."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Respected Sir, I am calling from Vijaya Bank, we need to reverify your KYC to prevent any unauthorized transactions, please confirm your personal details."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Good morning, I am calling from Dhanlaxmi Bank, we are conducting a random KYC check to ensure compliance, please provide me with your KYC documents."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Sir, this is Federal Bank, we need your KYC information to process your loan application, please provide me with your employment details and ID proof."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello, this is a government representative. We are conducting a random check on all citizens to verify their identity documents. Can you please provide your PAN number so we can complete the verification process?"
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Sir, we have received information that your bank account has been used for suspicious transactions. We need you to confirm your identity by providing your Aadhaar number and proof of address."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Good morning, this is a representative from the Income Tax Department. We are conducting a routine check to verify the accuracy of your income tax returns. Can you please provide your PAN number and financial details?"
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello, we are from the RBI. We are conducting a surprise check on all citizens to verify their KYC documents. Can you please provide your account details and proof of identity?"
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Sir, we have received a complaint about unauthorized transactions on your credit card. We need you to verify your identity by providing your PAN number and a copy of your ID proof."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Good evening, this is a representative from the UIDAI. We are conducting a routine check to verify the accuracy of your Aadhaar details. Can you please provide your Aadhaar number and other relevant documents?"
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello, we are from a government agency. We are conducting a check to verify your identity and financial records. Can you please provide your PAN number and proof of income?"
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Sir, we have received a complaint about a suspicious transaction on your bank account. We need you to verify your identity by providing your Aadhaar number and proof of address."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Good morning, this is a representative from the GST department. We are conducting a routine check to verify the accuracy of your GST returns. Can you please provide your PAN number and financial details?"
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello, we are from a government agency. We are conducting a check to verify your KYC documents. Can you please provide your account details and proof of identity?"
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Sir, we have received information that your bank account has been linked to a suspicious account. We need you to verify your identity by providing your Aadhaar number and proof of address."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Good evening, this is a representative from the RBI. We are conducting a routine check to verify the accuracy of your KYC documents. Can you please provide your account details and proof of identity?"
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello, this is Mr. Kumar from the Reserve Bank of India. We are calling to verify your KYC documents as per the RBI guidelines."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Namaste, my name is Rohan from the IDFC Bank, and we need to update your KYC information to enable the services on your bank account."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "This is the Income Tax Department, and we need to verify your PAN number to prevent any tax-related issues with your account."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Good day, this is Sangeeta from the Passport Office, and we need to confirm your identity for visa-related purposes."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello, I am calling from the Ministry of Corporate Affairs to inform you that your company's KYC details are incomplete and need to be updated immediately."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Namaste, my name is Ashish from the RBI, and we need to conduct a KYC audit to ensure compliance with the new regulations."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Good day, this is Mr. Jain from the UTI Mutual Fund, and we need to update your KYC information to enable the dividend payout on your investment."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello, this is the RBI helpline, and we need to verify your KYC details to prevent any fraud or money laundering activities."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Namaste, I am calling from the NSE to inform you that your trading account needs to be KYC-compliant to continue trading on our platform."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello, this is Ms. Verma from the SEBI, and we need to conduct a KYC review to ensure compliance with the new securities regulations."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Good day, this is Mr. Sharma from the RBI, and we need to update your KYC information to enable the payment services on your bank account."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello, I am calling from the IDFC Bank to inform you that your KYC details are incomplete and need to be updated immediately."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Namaste, this is the Income Tax Department, and we need to verify your PAN number to ensure compliance with the tax laws."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Good day, this is Suresh from the RBI, and we need to conduct a KYC audit to ensure compliance with the new regulations."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello, I am calling from the UTI Mutual Fund to inform you that your KYC information is outdated and needs to be updated immediately."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Namaste, this is the NSE, and we need to update your KYC details to enable the trading services on our platform."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Good day, this is Mr. Kumar from the IDFC Bank, and we need to verify your KYC documents as per the RBI guidelines."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Namaste, I am calling from the RBI to inform you that your bank account needs to be KYC-compliant to continue using our services."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Good day, this is Suresh from the Income Tax Department, and we need to verify your PAN number to prevent any tax-related issues."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello, I am calling from the UTI Mutual Fund to inform you that your KYC information is incomplete and needs to be updated immediately."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Namaste, this is Mr. Jain from the IDFC Bank, and we need to update your KYC details to enable the payment services on your bank account."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Good day, this is Ashish from the RBI, and we need to conduct a KYC audit to ensure compliance with the new regulations."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello, I am calling from the NSE to inform you that your trading account needs to be KYC-compliant to continue trading on our platform."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Namaste, this is Ms. Verma from the SEBI, and we need to update your KYC information to enable the dividend payout on your investment."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Good day, this is Suresh from the RBI, and we need to verify your KYC documents as per the RBI guidelines."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello, my name is Rohan from RBI. You have won a prize of 1 lakh rupees. Please provide your KYC details to claim the prize."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Namaste, this is a call from UIDAI. Your Aadhaar card has been suspended due to some issues. Please confirm your identity and provide KYC details to reactivate it."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Assalamu alaikum, this is a call from a nationalized bank. Your KYC details are incomplete, and we need to update it to continue your banking services. Please provide your KYC details over the phone."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "This is a call from SEBI. We have detected some suspicious transactions in your Demat account. Please provide your KYC details to confirm your identity and resolve the issue."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello, I am calling from a mutual fund company. We need to update your KYC details to credit your maturity amount. Please provide your KYC details over the phone."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Namaste, this is a call from IRDA. We have detected some issues with your KYC details in your insurance policy. Please confirm your identity and provide KYC details to resolve the issue."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello, this is a call from a financial institution. You have been selected for a KYC audit, and we need to verify your KYC details over the phone."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "This is a call from a national agency. We have detected some suspicious activities in your KYC details. Please provide your KYC details to confirm your identity and resolve the issue."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello, I am calling from a stockbroking company. We need to update your KYC details to trade in the stock market. Please provide your KYC details over the phone."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Assalamu alaikum, this is a call from a co-operative bank. Your KYC details are incomplete, and we need to update it to continue your banking services. Please provide your KYC details over the phone."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "This is a call from a tax authority. We have detected some discrepancies in your KYC details. Please confirm your identity and provide KYC details to resolve the issue."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello, I am calling from a microfinance company. We need to verify your KYC details to disburse a loan. Please provide your KYC details over the phone."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Namaste, this is a call from a pension fund company. We need to update your KYC details to credit your pension amount. Please provide your KYC details over the phone."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "This is a call from a mutual benefit fund company. We have detected some issues with your KYC details. Please confirm your identity and provide KYC details to resolve the issue."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello, I am calling from a financial regulator. We need to verify your KYC details to monitor your financial transactions. Please provide your KYC details over the phone."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Namaste, this is a call from a government agency. We have detected some discrepancies in your KYC details. Please confirm your identity and provide KYC details to resolve the issue."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "This is a call from a money service provider. We need to update your KYC details to send foreign exchange. Please provide your KYC details over the phone."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello, I am calling from a nationalized bank. Your KYC details are incomplete, and we need to update it to continue your banking services. Please provide your KYC details over the phone."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Assalamu alaikum, this is a call from a stock exchange. We need to verify your KYC details to trade in the stock market. Please provide your KYC details over the phone."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "This is a call from a tax consultant. We have detected some discrepancies in your KYC details. Please confirm your identity and provide KYC details to resolve the issue."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello, I am calling from a government agency. We have detected some suspicious activities in your KYC details. Please provide your KYC details to confirm your identity and resolve the issue."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Namaste, this is a call from a financial institution. You have been selected for a KYC audit, and we need to verify your KYC details over the phone."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "This is a call from a national agency. We have detected some issues with your KYC details. Please confirm your identity and provide KYC details to resolve the issue."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello, I am calling from a microfinance company. We need to update your KYC details to disburse a loan. Please provide your KYC details over the phone."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Assalamu alaikum, this is a call from a stockbroking company. We need to verify your KYC details to trade in the stock market. Please provide your KYC details over the phone."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "This is a call from a mutual benefit fund company. We have detected some discrepancies in your KYC details. Please confirm your identity and provide KYC details to resolve the issue."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Namaste, beta hai aapka account blocked ho gaya hai aur humko aapka KYC verification karna hai."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Aapne PAN card mein address update karne ke liye humko contact karna hai, bas aapka name aur phone number de dena."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hum aapke account mein transaction pehli baar dekhe hain, bas aapka KYC complete karna hai isliye hum aapko contact karte hain."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Aapke account mein kuchh suspicious activity dekhi gayi hai, bas hum aapko KYC verification ke liye baat karte hain."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Aapka Aadhaar card verify karna hai, bas aapka name aur date of birth de dena aur hum aapko KYC complete karne mein madad karlenge."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hum aapke account mein security check karna hai, bas aapka KYC verification karna hai isliye hum aapko contact karte hain."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Aapka KYC update karna hai, bas aapka address aur phone number de dena aur hum aapko KYC complete karne mein madad karlenge."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hum aapke account mein KYC verification karna hai, bas aapka name aur date of birth de dena aur hum aapko KYC complete karne mein madad karlenge."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Aapke account mein kuchh transaction block kiye gaye hain, bas aapka KYC complete karna hai isliye hum aapko contact karte hain."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hum aapke account mein KYC verification karna hai, bas aapka PAN card ka scan de dena aur hum aapko KYC complete karne mein madad karlenge."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Aapka KYC update karna hai, bas aapka address aur email ID de dena aur hum aapko KYC complete karne mein madad karlenge."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hum aapke account mein KYC verification karna hai, bas aapka Aadhaar card ka scan de dena aur hum aapko KYC complete karne mein madad karlenge."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Aapke account mein kuchh activity dekhi gayi hai, bas aapka KYC verification karna hai isliye hum aapko contact karte hain."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hum aapke account mein KYC update karna hai, bas aapka name aur date of birth de dena aur hum aapko KYC complete karne mein madad karlenge."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Aapka KYC verification karna hai, bas aapka phone number aur address de dena aur hum aapko KYC complete karne mein madad karlenge."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hum aapke account mein KYC verification karna hai, bas aapka Aadhaar card aur PAN card ka scan de dena aur hum aapko KYC complete karne mein madad karlenge."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Aapke account mein kuchh security check karna hai, bas aapka KYC complete karna hai isliye hum aapko contact karte hain."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hum aapke account mein KYC update karna hai, bas aapka address aur phone number de dena aur hum aapko KYC complete karne mein madad karlenge."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Aapka KYC verification karna hai, bas aapka name aur date of birth de dena aur hum aapko KYC complete karne mein madad karlenge."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hum aapke account mein KYC verification karna hai, bas aapka PAN card aur Aadhaar card ka scan de dena aur hum aapko KYC complete karne mein madad karlenge."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hello, this is a representative from RBI. We're calling you for a random audit to verify your KYC documents. Please provide us with your Aadhaar and PAN card details."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Good afternoon, we're calling from the Income Tax department. We've received a complaint about your bank account and need to update your KYC information. Please share your account details and identification proof with me."
+    },
+    {
+        "type": "KYC Scam",
+        "text": "Hi, this is a representative from HDFC Bank. We're upgrading our KYC system and need to update your account information. Please provide me with your bank account number and personal identification details."
+    }
+]

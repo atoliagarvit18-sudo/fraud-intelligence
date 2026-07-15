@@ -1,0 +1,386 @@
+[
+    {
+        "type": "Job Scam",
+        "text": "Hello, you've been selected for a job position at our company. We need you to pay a fee to get started."
+    },
+    {
+        "type": "Job Scam",
+        "text": "We're offering a job opportunity in a multinational company. You'll need to pay Rs. 50,000 to get the job."
+    },
+    {
+        "type": "Job Scam",
+        "text": "You've been called for an interview, but we need you to deposit Rs. 20,000 first to confirm your seat."
+    },
+    {
+        "type": "Job Scam",
+        "text": "This is an opportunity to work as a data entry operator at our company. You'll need to pay Rs. 10,000 to get the job."
+    },
+    {
+        "type": "Job Scam",
+        "text": "We're looking for a sales representative, but our company policy requires a fee of Rs. 30,000 to get started."
+    },
+    {
+        "type": "Job Scam",
+        "text": "This is a job offer for a customer service representative position. You'll need to pay Rs. 8,000 to get the job."
+    },
+    {
+        "type": "Job Scam",
+        "text": "We're offering a job in a software development company, and we need you to pay Rs. 40,000 to get started."
+    },
+    {
+        "type": "Job Scam",
+        "text": "This is an opportunity to work as a marketing executive at our company. We require a fee of Rs. 25,000 to get started."
+    },
+    {
+        "type": "Job Scam",
+        "text": "You've been selected for a job position, but we need you to pay Rs. 15,000 to get the job."
+    },
+    {
+        "type": "Job Scam",
+        "text": "We're looking for a job candidate, and we require a fee of Rs. 22,000 to get started."
+    },
+    {
+        "type": "Job Scam",
+        "text": "This is an opportunity to work as a software engineer at our company. We need you to pay Rs. 38,000 to get the job."
+    },
+    {
+        "type": "Job Scam",
+        "text": "We're offering a job in a finance company, and we require a fee of Rs. 18,000 to get started."
+    },
+    {
+        "type": "Job Scam",
+        "text": "You've been selected for a job position, but we need you to pay Rs. 12,000 to get the job."
+    },
+    {
+        "type": "Job Scam",
+        "text": "This is an opportunity to work as a data analyst at our company. We need you to pay Rs. 20,000 to get started."
+    },
+    {
+        "type": "Job Scam",
+        "text": "We're looking for a job candidate, and we require a fee of Rs. 35,000 to get started."
+    },
+    {
+        "type": "Job Scam",
+        "text": "This is an opportunity to work as a web developer at our company. We need you to pay Rs. 28,000 to get started."
+    },
+    {
+        "type": "Job Scam",
+        "text": "We're offering a job in a software development company, and we need you to pay Rs. 42,000 to get started."
+    },
+    {
+        "type": "Job Scam",
+        "text": "You've been selected for a job position, but we need you to pay Rs. 11,000 to get the job."
+    },
+    {
+        "type": "Job Scam",
+        "text": "This is an opportunity to work as a marketing executive at our company. We require a fee of Rs. 24,000 to get started."
+    },
+    {
+        "type": "Job Scam",
+        "text": "We're looking for a job candidate, and we require a fee of Rs. 19,000 to get started."
+    },
+    {
+        "type": "Job Scam",
+        "text": "This is an opportunity to work as a data scientist at our company. We need you to pay Rs. 36,000 to get started."
+    },
+    {
+        "type": "Job Scam",
+        "text": "We're offering a job in a finance company, and we require a fee of Rs. 16,000 to get started."
+    },
+    {
+        "type": "Job Scam",
+        "text": "You've been selected for a job position, but we need you to pay Rs. 13,000 to get the job."
+    },
+    {
+        "type": "Job Scam",
+        "text": "This is an opportunity to work as a software engineer at our company. We need you to pay Rs. 39,000 to get started."
+    },
+    {
+        "type": "Job Scam",
+        "text": "We're looking for a job candidate, and we require a fee of Rs. 26,000 to get started."
+    },
+    {
+        "type": "Job Scam",
+        "text": "This is an opportunity to work as a customer service representative at our company. We need you to pay Rs. 9,000 to get started."
+    },
+    {
+        "type": "Job Scam",
+        "text": "Thank you for responding to our job posting. We are looking for someone to work from home and the pay is $1,500 per month. Can you tell me more about your availability?"
+    },
+    {
+        "type": "Job Scam",
+        "text": "Hello sir, I am calling from ABC Recruitment Agency and we have a job opening for a software engineer position. The salary is ₹50,000 per month. Can you attend a virtual interview today?"
+    },
+    {
+        "type": "Job Scam",
+        "text": "Good morning, my name is Ramesh and I am calling from a staffing agency. We have a job opportunity for a data entry operator position and the pay is ₹20,000 per month. Can you join us for a video interview?"
+    },
+    {
+        "type": "Job Scam",
+        "text": "Hi, I am calling from a job portal and we have a job opening for a customer support executive position. The salary is ₹25,000 per month and you will work from home. Can you share your resume with me?"
+    },
+    {
+        "type": "Job Scam",
+        "text": "Hello sir, I am calling from Tech Solutions and we have a job opportunity for a technical support specialist position. The pay is $2,000 per month and you will work from home. Can you attend a virtual interview today?"
+    },
+    {
+        "type": "Job Scam",
+        "text": "Good morning, my name is Rohan and I am calling from a recruitment agency. We have a job opening for a marketing executive position and the salary is ₹30,000 per month. Can you join us for a video interview?"
+    },
+    {
+        "type": "Job Scam",
+        "text": "Hi, I am calling from a job posting website and we have a job opportunity for a software developer position. The pay is ₹40,000 per month and you will work from home. Can you share your resume with me?"
+    },
+    {
+        "type": "Job Scam",
+        "text": "Hello sir, I am calling from a staffing agency and we have a job opening for a sales executive position. The salary is ₹35,000 per month and you will work from home. Can you attend a virtual interview today?"
+    },
+    {
+        "type": "Job Scam",
+        "text": "Hi, I am calling from a job posting website and we have a job opening for an IT support specialist position. The salary is ₹45,000 per month and you will work from home. Can you share your resume with me?"
+    },
+    {
+        "type": "Job Scam",
+        "text": "Hello sir, I am calling from Tech Solutions and we have a job opportunity for a web developer position. The pay is $1,800 per month and you will work from home. Can you attend a virtual interview today?"
+    },
+    {
+        "type": "Job Scam",
+        "text": "Hi, I am calling from a job posting website and we have a job opportunity for a marketing manager position. The pay is ₹50,000 per month and you will work from home. Can you share your resume with me?"
+    },
+    {
+        "type": "Job Scam",
+        "text": "Hello sir, I am calling from a staffing agency and we have a job opening for a HR executive position. The salary is ₹28,000 per month and you will work from home. Can you attend a virtual interview today?"
+    },
+    {
+        "type": "Job Scam",
+        "text": "Hi, I am calling from a job posting website and we have a job opening for a customer service representative position. The salary is ₹25,000 per month and you will work from home. Can you share your resume with me?"
+    },
+    {
+        "type": "Job Scam",
+        "text": "Hello sir, I am calling from Tech Solutions and we have a job opportunity for a data entry operator position. The pay is $1,600 per month and you will work from home. Can you attend a virtual interview today?"
+    },
+    {
+        "type": "Job Scam",
+        "text": "Hi, I am calling from a job posting website and we have a job opportunity for a technical support specialist position. The pay is ₹48,000 per month and you will work from home. Can you share your resume with me?"
+    },
+    {
+        "type": "Job Scam",
+        "text": "Hello sir, I am calling from a staffing agency and we have a job opening for a sales executive position. The salary is ₹40,000 per month and you will work from home. Can you attend a virtual interview today?"
+    },
+    {
+        "type": "Job Scam",
+        "text": "Hi, I am calling from a job posting website and we have a job opening for a customer support executive position. The salary is ₹20,000 per month and you will work from home. Can you share your resume with me?"
+    },
+    {
+        "type": "Job Scam",
+        "text": "Hello sir, I am calling from Tech Solutions and we have a job opportunity for a marketing manager position. The pay is $2,500 per month and you will work from home. Can you attend a virtual interview today?"
+    },
+    {
+        "type": "Job Scam",
+        "text": "Hi, I am calling from a job posting website and we have a job opportunity for an IT support specialist position. The pay is ₹18,000 per month and you will work from home. Can you share your resume with me?"
+    },
+    {
+        "type": "Job Scam",
+        "text": "Hello sir, I am calling from a staffing agency and we have a job opening for a web developer position. The pay is $2,200 per month and you will work from home. Can you attend a virtual interview today?"
+    },
+    {
+        "type": "Job Scam",
+        "text": "Are you looking for a job? I have a great opportunity with a big company, no experience required. You'll be making a lot of money and working from home."
+    },
+    {
+        "type": "Job Scam",
+        "text": "Hello, I'm calling from XYZ Recruitment Agency. We have a job opening for a data entry operator, and we need someone to work from home. You'll be paid Rs. 50,000 per month."
+    },
+    {
+        "type": "Job Scam",
+        "text": "This is Rohan from ABC Corporation. We're hiring customer service representatives, and you can work from the comfort of your own home. The pay is Rs. 80,000 per month."
+    },
+    {
+        "type": "Job Scam",
+        "text": "We have a job opening for a sales executive. You'll be working from home, and we'll provide you with all the necessary training. You'll be making a lot of money, up to Rs. 1,20,000 per month."
+    },
+    {
+        "type": "Job Scam",
+        "text": "Hello, I'm calling from a company that specializes in data entry services. We need a team of data entry operators to work from home. You'll be paid Rs. 40,000 per month."
+    },
+    {
+        "type": "Job Scam",
+        "text": "This is a job offer from a well-known company. We need someone to work as a customer care executive. You'll be working from home, and the pay is Rs. 70,000 per month."
+    },
+    {
+        "type": "Job Scam",
+        "text": "We're hiring a sales representative to work from home. You'll be making a lot of money, up to Rs. 1,00,000 per month. We'll provide you with all the necessary training."
+    },
+    {
+        "type": "Job Scam",
+        "text": "Hello, I'm calling from a company that provides technical support services. We need someone to work as a technical support executive from home. The pay is Rs. 60,000 per month."
+    },
+    {
+        "type": "Job Scam",
+        "text": "This is a job offer from a top-rated company. We need a team of content writers to work from home. You'll be paid Rs. 30,000 per month."
+    },
+    {
+        "type": "Job Scam",
+        "text": "We're hiring a marketing executive to work from home. You'll be making a lot of money, up to Rs. 90,000 per month. We'll provide you with all the necessary training."
+    },
+    {
+        "type": "Job Scam",
+        "text": "Hello, I'm calling from a company that specializes in telemarketing services. We need someone to work as a telemarketing executive from home. The pay is Rs. 50,000 per month."
+    },
+    {
+        "type": "Job Scam",
+        "text": "This is a job offer from a well-established company. We need a team of customer service representatives to work from home. You'll be paid Rs. 40,000 per month."
+    },
+    {
+        "type": "Job Scam",
+        "text": "We're hiring a data analyst to work from home. You'll be making a lot of money, up to Rs. 1,20,000 per month. We'll provide you with all the necessary training."
+    },
+    {
+        "type": "Job Scam",
+        "text": "Hello, I'm calling from a company that provides outsourcing services. We need someone to work as a customer care executive from home. The pay is Rs. 60,000 per month."
+    },
+    {
+        "type": "Job Scam",
+        "text": "This is a job offer from a top-rated company. We need a team of sales executives to work from home. You'll be paid Rs. 80,000 per month."
+    },
+    {
+        "type": "Job Scam",
+        "text": "We're hiring a digital marketing executive to work from home. You'll be making a lot of money, up to Rs. 1,00,000 per month. We'll provide you with all the necessary training."
+    },
+    {
+        "type": "Job Scam",
+        "text": "Hello, I'm calling from a company that specializes in content writing services. We need someone to work as a content writer from home. The pay is Rs. 30,000 per month."
+    },
+    {
+        "type": "Job Scam",
+        "text": "This is a job offer from a well-established company. We need a team of telemarketing executives to work from home. You'll be paid Rs. 50,000 per month."
+    },
+    {
+        "type": "Job Scam",
+        "text": "We're hiring a customer service manager to work from home. You'll be making a lot of money, up to Rs. 1,20,000 per month. We'll provide you with all the necessary training."
+    },
+    {
+        "type": "Job Scam",
+        "text": "Hello, I'm calling from a company that provides outsourcing services. We need someone to work as a sales executive from home. The pay is Rs. 90,000 per month."
+    },
+    {
+        "type": "Job Scam",
+        "text": "This is a job offer from a top-rated company. We need a team of digital marketing executives to work from home. You'll be paid Rs. 1,00,000 per month."
+    },
+    {
+        "type": "Job Scam",
+        "text": "We're hiring a data entry supervisor to work from home. You'll be making a lot of money, up to Rs. 1,20,000 per month. We'll provide you with all the necessary training."
+    },
+    {
+        "type": "Job Scam",
+        "text": "We're hiring a customer service officer to work from home. You'll be making a lot of money, up to Rs. 90,000 per month. We'll provide you with all the necessary training."
+    },
+    {
+        "type": "Job Scam",
+        "text": "Hello, I'm calling from a company that provides outsourcing services. We need someone to work as a sales executive from home. The pay is Rs. 80,000 per month."
+    },
+    {
+        "type": "Job Scam",
+        "text": "Hello, you've been selected for a job position at a well-known company. Please provide your address and PAN number to proceed."
+    },
+    {
+        "type": "Job Scam",
+        "text": "Hi, we're offering you a job in a multinational firm. But first, you need to pay a registration fee of ₹5,000 to secure the position."
+    },
+    {
+        "type": "Job Scam",
+        "text": "This is a recruitment representative from XYZ Corporation. We're offering you a job, and to complete the paperwork, please provide your bank account details."
+    },
+    {
+        "type": "Job Scam",
+        "text": "You've been shortlisted for a job at a top IT company. Please provide your resume and a passport-size photo to proceed with the application process."
+    },
+    {
+        "type": "Job Scam",
+        "text": "Hello, we've received your application for a job at our company. Now, we just need you to transfer ₹15,000 to our bank account to confirm your interest."
+    },
+    {
+        "type": "Job Scam",
+        "text": "We're offering you a high-paying job in a prestigious company. To process your application, please provide your education and work experience certificates."
+    },
+    {
+        "type": "Job Scam",
+        "text": "We've selected you for a job at our company based on your skills and qualifications. Please provide your LinkedIn profile and a copy of your passport."
+    },
+    {
+        "type": "Job Scam",
+        "text": "Hello, we're offering you a job with a lucrative salary package. However, you need to pay a fee of ₹2,000 to secure the position and get access to our training materials."
+    },
+    {
+        "type": "Job Scam",
+        "text": "We're recruiting for a job position at our company, and you've been selected based on your credentials. Please provide your address and phone number to proceed with the application."
+    },
+    {
+        "type": "Job Scam",
+        "text": "You've been shortlisted for a job at our company, and we need you to provide your bank account details and a copy of your Aadhaar card to complete the application process."
+    },
+    {
+        "type": "Job Scam",
+        "text": "Hello, we're offering you a job in a top finance company. But first, you need to pay a membership fee of ₹10,000 to secure the position and get access to our training resources."
+    },
+    {
+        "type": "Job Scam",
+        "text": "We're offering you a job with excellent growth opportunities. To process your application, please provide your resume and a copy of your degree certificate."
+    },
+    {
+        "type": "Job Scam",
+        "text": "Hello, you've been selected for a job position at our company. Please provide your LinkedIn profile and a copy of your PAN card to proceed with the application."
+    },
+    {
+        "type": "Job Scam",
+        "text": "We're recruiting for a job position at our company, and you've been selected based on your skills and qualifications. Please provide your address and phone number to proceed with the application."
+    },
+    {
+        "type": "Job Scam",
+        "text": "We're offering you a job in a top IT company with a high salary package. However, you need to pay a registration fee of ₹8,000 to secure the position and get access to our training materials."
+    },
+    {
+        "type": "Job Scam",
+        "text": "Hello, you've been shortlisted for a job at our company. Please provide your bank account details and a copy of your education certificates to complete the application process."
+    },
+    {
+        "type": "Job Scam",
+        "text": "We're offering you a job in a prestigious company with excellent growth opportunities. To process your application, please provide your resume and a copy of your degree certificate."
+    },
+    {
+        "type": "Job Scam",
+        "text": "Hello, we're offering you a job in a top finance company. But first, you need to pay a membership fee of ₹12,000 to secure the position and get access to our training resources."
+    },
+    {
+        "type": "Job Scam",
+        "text": "You've been selected for a job position at our company, and we need you to provide your address and phone number to proceed with the application."
+    },
+    {
+        "type": "Job Scam",
+        "text": "We're recruiting for a job position at our company, and you've been selected based on your skills and qualifications. Please provide your LinkedIn profile to proceed with the application."
+    },
+    {
+        "type": "Job Scam",
+        "text": "Hello, we're offering you a job in a top IT company with a high salary package. However, you need to pay a registration fee of ₹5,500 to secure the position and get access to our training materials."
+    },
+    {
+        "type": "Job Scam",
+        "text": "You've been shortlisted for a job at our company. Please provide your bank account details and a copy of your PAN card to complete the application process."
+    },
+    {
+        "type": "Job Scam",
+        "text": "We're offering you a job in a prestigious company with excellent growth opportunities. To process your application, please provide your resume and a copy of your education certificates."
+    },
+    {
+        "type": "Job Scam",
+        "text": "Hello, we're offering you a job in a top finance company. But first, you need to pay a membership fee of ₹9,000 to secure the position and get access to our training resources."
+    },
+    {
+        "type": "Job Scam",
+        "text": "You've been selected for a job position at our company, and we need you to provide your LinkedIn profile and a copy of your Aadhaar card to complete the application process."
+    },
+    {
+        "type": "Job Scam",
+        "text": "Hello, we're offering you a job in a top IT company with a high salary package. However, you need to pay a registration fee of ₹7,000 to secure the position and get access to our training materials."
+    }
+]

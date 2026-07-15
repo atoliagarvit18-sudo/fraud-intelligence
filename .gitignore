@@ -1,0 +1,8 @@
+agent3/venv/
+agent3/output/
+agent3/__pycache__/
+agent3/src/__pycache__/
+*.pyc
+.cache/
+agent3/.env
+agent3/audio/*.mp3
