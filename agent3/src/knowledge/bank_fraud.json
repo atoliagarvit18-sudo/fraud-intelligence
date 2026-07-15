@@ -1,0 +1,802 @@
+[
+    {
+        "type": "Bank Fraud",
+        "text": "Hello, this is Rohan from ICICI Bank. Your account has been compromised and we need your card details to rectify the issue."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Your bank account has been frozen due to suspicious activity and we need you to verify your account details to release the freeze."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We are offering you a special loan offer with a low interest rate, but we need your PAN card details to process the application."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Your credit card has been compromised and we need you to provide us with your card details to replace it with a new one."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We are informing you that your bank account has been blocked due to non-payment of taxes and we need you to pay the amount to release the block."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We have detected some unauthorized transactions on your account and we need you to verify your account details to confirm your identity."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Your bank account has been hacked and we need you to provide us with your account details to rectify the issue."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We are offering you a special banking package with exclusive benefits, but we need your account details to process the application."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We are contacting you regarding a discrepancy in your bank account and we need you to provide us with your account details to investigate the issue."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Your credit card has been used for an unauthorized transaction and we need you to provide us with your card details to replace it with a new one."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We are informing you that your bank account has been linked to a suspicious transaction and we need you to verify your account details to release the freeze."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We are offering you a special credit card with a high credit limit, but we need your PAN card details to process the application."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Your bank account has been compromised and we need you to provide us with your account details to rectify the issue."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We are contacting you regarding an unauthorized transaction on your account and we need you to verify your account details to confirm your identity."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Your bank account has been blocked due to a security breach and we need you to provide us with your account details to release the block."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We have detected some suspicious activity on your account and we need you to verify your account details to confirm your identity."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We are informing you that your bank account has been blocked due to a security breach and we need you to provide us with your account details to release the block."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Hello, this is a representative from HDFC Bank, we've noticed suspicious activity on your account and need to verify some details."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Ma'am, we've received a complaint about an unauthorized transaction on your SBI Bank account, please confirm your login credentials."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Hello, I'm calling from ICICI Bank's security team, we need to discuss some concerns regarding your recent transactions."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We've detected some unusual activity on your Axis Bank account, can you please provide your account number and PIN for verification?"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Our system has flagged some suspicious activity on your account, we need to reset your account password to prevent unauthorized access."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Can you confirm your debit card details, we've received a complaint about card not working."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "You've won a prize in a bank promotion, please provide your account details to claim the prize."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We've received a report of a suspicious transaction on your Kotak Mahindra Bank account, please verify some details."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We need your help to resolve a technical issue with your account, please provide your login credentials."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We're calling from the bank's security team, we need to discuss some concerns regarding your recent online activity."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Your account has been flagged for non-payment, please provide your card details to rectify the issue."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We've detected some unusual activity on your account, can you please provide your account number and PAN card details for verification?"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "You're eligible for a bank loan, please provide your income details to process the loan."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Our system has detected some suspicious activity on your account, we need to reset your account password to prevent unauthorized access."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "You've been selected for a bank promotion, please provide your account details to claim the prize."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We need your help to resolve a technical issue with your account, please provide your debit card details."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We've received a report of a suspicious transaction on your account, please verify some details."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Your account has been flagged for non-payment, please provide your account number and account details to rectify the issue."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Your account has been compromised, we need you to provide your account details to rectify the issue."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We've detected some unusual activity on your account, can you please provide your debit card details for verification?"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Hello, this is Suresh from State Bank of India. Your account has been compromised and we need you to verify your details to prevent further loss."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Good evening, we are from HDFC Bank's security team. We have detected some suspicious activity on your account and need you to provide your card details to secure it."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Hello, I am Rohan from ICICI Bank. Your account has been locked due to non-compliance with RBI guidelines and we need your help to unlock it."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Namaste, this is from Bank of Baroda's customer support. We need to verify your account details to prevent unauthorized transactions."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Good morning, we are from Axis Bank's security department. We have detected some fraudulent activity on your account and need you to provide your ATM PIN to secure it."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Hello, I am from IndusInd Bank. We need to verify your account details to prevent any potential losses due to account hacking."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Good evening, we are from Kotak Mahindra Bank's customer support. We have detected some suspicious activity on your account and need you to provide your card details to secure it."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Hello, I am from Yes Bank's security team. Your account has been locked due to non-compliance with RBI guidelines and we need your help to unlock it."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Namaste, this is from IDBI Bank's customer support. We need to verify your account details to prevent unauthorized transactions."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Good morning, we are from Punjab National Bank's security department. We have detected some fraudulent activity on your account and need you to provide your ATM PIN to secure it."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Hello, I am from Canara Bank. We need to verify your account details to prevent any potential losses due to account hacking."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Good evening, we are from Union Bank of India's customer support. We have detected some suspicious activity on your account and need you to provide your card details to secure it."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Hello, I am from Oriental Bank of Commerce's security team. Your account has been locked due to non-compliance with RBI guidelines and we need your help to unlock it."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Namaste, this is from Bank of India's customer support. We need to verify your account details to prevent unauthorized transactions."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Good morning, we are from Central Bank of India's security department. We have detected some fraudulent activity on your account and need you to provide your ATM PIN to secure it."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Hello, I am from UCO Bank. We need to verify your account details to prevent any potential losses due to account hacking."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Good evening, we are from Andhra Bank's customer support. We have detected some suspicious activity on your account and need you to provide your card details to secure it."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Hello, I am from Corporation Bank's security team. Your account has been locked due to non-compliance with RBI guidelines and we need your help to unlock it."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Namaste, this is from Syndicate Bank's customer support. We need to verify your account details to prevent unauthorized transactions."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Good morning, we are from Allahabad Bank's security department. We have detected some fraudulent activity on your account and need you to provide your ATM PIN to secure it."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Hello, I am from Dena Bank. We need to verify your account details to prevent any potential losses due to account hacking."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Good evening, we are from Vijaya Bank's customer support. We have detected some suspicious activity on your account and need you to provide your card details to secure it."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Hello, I am from Indian Overseas Bank's security team. Your account has been locked due to non-compliance with RBI guidelines and we need your help to unlock it."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Namaste, this is from United Bank of India's customer support. We need to verify your account details to prevent unauthorized transactions."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Good morning, we are from Punjab & Sind Bank's security department. We have detected some fraudulent activity on your account and need you to provide your ATM PIN to secure it."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Hello, I am from Bank of Maharashtra. We need to verify your account details to prevent any potential losses due to account hacking."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Good evening, we are from Canara Bank of India's customer support. We have detected some suspicious activity on your account and need you to provide your card details to secure it."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Hello, I am from Karur Vysya Bank's security team. Your account has been locked due to non-compliance with RBI guidelines and we need your help to unlock it."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Hello, your bank account has been compromised, please give me your account number and PIN to verify your identity"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We have noticed suspicious activity on your bank account, please contact me to confirm your account details"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Your bank has been hacked, I need your account information to transfer your funds to a safe account"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "I am calling from the bank's security department, please provide me with your account number to authenticate your account"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Your bank account has been frozen due to non-payment of a loan, please call me to resolve the issue"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We have detected a transaction on your bank account that you may not be aware of, please confirm the details with me"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Your bank has launched a new service, please provide me with your account information to get more details"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We are conducting a survey to improve our banking services, please answer some questions to participate"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Your bank account will be closed if you don't confirm your account details with me immediately"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We need to verify your identity to update your bank account information, please provide me with your PAN card details"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Your bank has partnered with a new financial institution, please provide me with your account information to get more details"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We are facing a system issue and need your account information to resolve it, please provide me with your account number"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Your bank account has been selected for a reward program, please provide me with your account details to get more information"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Your bank has launched a new debit card, please provide me with your account information to get more details"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We are conducting a security audit and need your account information to complete it, please provide me with your account number"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Your bank account has been hacked, please provide me with your account information to transfer your funds to a safe account"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We need to update your bank account information, please provide me with your Aadhaar card details"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Your bank account will be suspended if you don't confirm your account details with me immediately"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We are conducting a financial check and need your account information to complete it, please provide me with your account number"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We have launched a new online banking service, please provide me with your account information to get more details"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Your bank account has been selected for a loan, please provide me with your account details to get more information"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Your bank has partnered with a new e-commerce company, please provide me with your account information to get more details"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We are conducting a security test and need your account information to complete it, please provide me with your account number"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Hello, this is Suresh from ICICI Bank. Your account has been compromised and we need your debit card details to prevent any further transactions."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Namaste, I am calling from HDFC Bank about your loan application. Can you please confirm your PAN number?"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Your bank account has been locked due to suspicious activity. To unlock it, please call us back on this number and provide your account number and login ID."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Your credit card has been used for an unauthorized transaction. We need you to confirm the transaction details and provide your card number for verification."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Hello, this is a special service from Axis Bank. We are calling to inform you that your bank account has won a prize. Please confirm your account details to receive the prize money."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Your bank account has been selected for a special offer. To receive the offer, please provide your account number and login ID to our customer service representative."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We have detected some suspicious activity in your bank account. Please call us back to verify your account details and confirm your identity."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Your bank account has been compromised due to a technical issue. We need you to provide your debit card details to verify your account."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Namaste, I am calling from Bank of India about your savings account. We need your account number and login ID to verify your identity and confirm your transaction history."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Your bank account has been locked due to a security breach. To unlock it, please call us back and provide your account number and login ID for verification."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We are calling from a special department at State Bank of India. We are investigating a suspicious transaction in your bank account and need you to confirm your account details."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Your credit card has been used for an online transaction. We need you to confirm the transaction details and provide your card number for verification."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Your bank account has been selected for a special promotion. To receive the benefits, please provide your account number and login ID to our customer service representative."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Hello, this is a special service from Kotak Mahindra Bank. We are calling to inform you that your bank account has been upgraded to a premium account. Please confirm your account details to receive the benefits."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Namaste, I am calling from Canara Bank about your loan application. Can you please confirm your PAN number?"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We are calling from a special department at Punjab National Bank. We are investigating a suspicious transaction in your bank account and need you to confirm your account details."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Hello, this is a special service from IndusInd Bank. We are calling to inform you that your bank account has been upgraded to a premium account. Please confirm your account details to receive the benefits."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Namaste, I am calling from Bank of Baroda about your savings account. We need your account number and login ID to verify your identity and confirm your transaction history."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Your account is compromised and we need to verify your details to secure it."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "You have won an Indian bank's cash prize and need to pay 10,000 rupees for the taxes."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Our bank's system has detected unusual activity in your account and we need your login credentials."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We are calling from the RBI and need your account details to complete an audit."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "You have been selected for a bank survey and need to provide your account information."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Your bank card has been blocked due to suspected fraud and we need to verify your identity."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We are calling from the State Bank of India and need your account details to process a loan."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Your account has been hacked and we need to reset your password and username."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We are calling from the ICICI Bank security team and need your account details to investigate a transaction."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Your bank account has been credited with 10,000 rupees and you need to verify the transaction."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We are calling from the HDFC Bank and need your account details to process a credit card application."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Your SBI account has been compromised and we need to reset your PIN and password."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We are calling from the Axis Bank and need your account details to process a loan."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Your account has been blocked due to non-payment of fees and we need to verify your payment details."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We are calling from the Kotak Mahindra Bank and need your account details to process a credit card application."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Your account has been credited with 50,000 rupees and we need to verify the transaction."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We are calling from the Bank of Baroda and need your account details to process a loan."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Your account has been compromised and we need to reset your password and username."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We are calling from the Canara Bank and need your account details to process a credit card application."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We are calling from the Andhra Bank and need your account details to process a loan."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Your account has been credited with 20,000 rupees and we need to verify the transaction."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We are calling from the Union Bank of India and need your account details to process a credit card application."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Your account has been compromised and we need to reset your PIN and password."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We are calling from the Central Bank of India and need your account details to process a loan."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We are calling from the Punjab National Bank and need your account details to process a credit card application."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Hello, your SBI account has been compromised, please give me your account details to secure it"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "You've won 50 lakhs in a national lottery, please deposit 5 lakhs to claim it"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Your HDFC credit card has been blocked due to suspicious activity, transfer your balance to this new card"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We need to verify your account info for a security audit, please provide your PAN and IFSC code"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "This is ICICI, your account has been frozen due to non-payment, just make this one-time payment and we'll unfreeze it"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "I'm from Axis Bank, I need to assist you with your loan, can I have your loan account details and address"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Your debit card has been compromised in a cyber attack, we need to replace it with a new one, just pay the shipping fee"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "This is a courtesy call from Bank of Baroda, we need to remind you about your home loan, let's discuss the interest rates"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We've detected some suspicious activity in your State Bank of India account, can you confirm your account details"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "You've been selected for a special banking program, please deposit 10 thousands to activate it"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Your Indian Overseas Bank account has been flagged for non-compliance, please update your KYC documents"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "I'm from a leading bank, we need to assist you with your credit card, can you provide your card details"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We need to conduct a security audit on your UCO Bank account, please confirm your account information"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Your account has been selected for a special promotional offer, just make this one-time payment to activate it"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We need to verify your ID proof for a banking regulation, can you provide your PAN card and Aadhaar number"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Your account has been locked due to incorrect PIN, provide the correct PIN to unlock it"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "This is a notification from HDFC Bank, we need to update your account information, please provide your new address"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We need to assist you with your loan, can you confirm your income and employment details"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "You've been selected for a special banking program, please make this one-time payment to activate it"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Your SBI account has been compromised, please provide your account details to secure it"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We need to conduct a security audit on your Axis Bank account, please confirm your account information"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "This is a notification from ICICI Bank, we need to update your account information, please provide your new PAN card"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Your account has been locked due to non-payment, make this one-time payment to unlock it"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We need to assist you with your credit card, can you provide your card details and security PIN"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "You've been selected for a special promotional offer, just make this one-time payment to activate it"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Your account has been compromised, please provide your account details and password to secure it"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "This is a notification from Bank of India, we need to update your account information, please provide your new address"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We need to conduct a security audit on your UCO Bank account, please confirm your account information and security PIN"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Sir ji, aapki bank account mein koi transaction hai jo bandh ho raha hai, aapko kuch paise dene hain"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Madam aapko hamare bank ko ek paise dene hain, yeh unka account khata hai"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Sir aapka card block ho raha hai, kya aap mujhe apna card number aur CVV de sakte hain?"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Aapka account khata hai, aapko kuch paise dene hain, isme koi shak nahin hai"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Madam aapko hamare bank ko ek paise dene hain, yeh unka account khata hai, aapko nhi pata hai?"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Sir aapka account khata hai, aapko kuch paise dene hain, yeh aapka account hai, aapko nhi pata hai?"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Madam aapko hamare bank ko ek paise dene hain, yeh unka account khata hai, yeh aapka account hai"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Sir aapka account block ho raha hai, kya aap mujhe apna card number aur CVV de sakte hain?"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Aapka account khata hai, aapko kuch paise dene hain, isme koi shak nahin hai, sir"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Madam aapko hamare bank ko ek paise dene hain, yeh unka account khata hai, aapko nhi pata hai, sirji"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Sir aapka account khata hai, aapko kuch paise dene hain, yeh aapka account hai, aapko nhi pata hai, sirji"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Aapka account khata hai, aapko kuch paise dene hain, isme koi shak nahin hai, sirji"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Madam aapko hamare bank ko ek paise dene hain, yeh unka account khata hai, yeh aapka account hai, isme koi shak nahin hai"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Sir aapka account block ho raha hai, kya aap mujhe apna card number aur CVV de sakte hain, sirji?"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Aapka account khata hai, aapko kuch paise dene hain, yeh aapka account hai, aapko nhi pata hai, sirji, isme koi shak nahin hai"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Madam aapko hamare bank ko ek paise dene hain, yeh unka account khata hai, aapko nhi pata hai, sirji, isme koi shak nahin hai, yeh aapka account hai"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Sir aapka account khata hai, aapko kuch paise dene hain, yeh aapka account hai, aapko nhi pata hai, sirji, yeh aapka account hai, isme koi shak nahin hai"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Aapka account khata hai, aapko kuch paise dene hain, yeh aapka account hai, aapko nhi pata hai, sirji, isme koi shak nahin hai, yeh aapka account hai, yeh unka account khata hai"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Madam aapko hamare bank ko ek paise dene hain, yeh unka account khata hai, aapko nhi pata hai, sirji, isme koi shak nahin hai, yeh aapka account hai, yeh aapka account hai, aapko nhi pata hai"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Sir aapka account khata hai, aapko kuch paise dene hain, yeh aapka account hai, aapko nhi pata hai, sirji, yeh aapka account hai, aapko nhi pata hai, isme koi shak nahin hai"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Aapka account khata hai, aapko kuch paise dene hain, yeh aapka account hai, aapko nhi pata hai, sirji, isme koi shak nahin hai, yeh aapka account hai, yeh unka account khata hai, aapko nhi pata hai"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Sir aapka account khata hai, aapko kuch paise dene hain, yeh aapka account hai, aapko nhi pata hai, sirji, yeh aapka account hai, aapko nhi pata hai, isme koi shak nahin hai, yeh aapka account hai"
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Hello sir, this is from RBI calling about your recent transactions. We need your card details and OTP for verification."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Your HDFC bank account has been compromised. Please verify your ID and update your login credentials with our support team."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Sir, this is ICICI bank informing you about an unauthorized withdrawal. We need your account number and PIN for further assistance."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Your SBI bank account has been frozen due to suspicious activity. Please call back within 24 hours to resolve the issue."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We are from the bank's security department. Your account has been compromised and we need your credit card number and security code for verification."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Sir, your bank account is eligible for a cashback scheme. Please provide your account details and PAN number to avail the offer."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We are from the bank's fraud department. Your account has been flagged for suspicious activity. Please call back to resolve the issue."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Your bank account is experiencing technical difficulties. Please provide your account number and ID for our support team to assist."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Sir, your bank account is being investigated for money laundering. We need your account details and credit card number for further assistance."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We are from the bank's online security team. Your account has been compromised due to a security breach. Please update your login credentials with our support team."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Your bank account has been selected for a lucky draw. Please provide your account number and ID to claim your prize."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Sir, your bank account is experiencing issues with your debit card. We need your card details and PIN for verification."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We are from the bank's customer support team. Your account has been compromised due to a technical issue. Please call back within 24 hours to resolve the issue."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Your bank account is eligible for a loan scheme. Please provide your account details and credit report for further assistance."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Sir, your bank account is being investigated for identity theft. We need your account details and ID for further assistance."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We are from the bank's online security team. Your account has been compromised due to a phishing attack. Please update your login credentials with our support team."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Your bank account has been selected for a credit card upgrade. Please provide your account details and credit score for further assistance."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "Sir, your bank account is experiencing issues with your net banking. We need your account number and ID for verification."
+    },
+    {
+        "type": "Bank Fraud",
+        "text": "We are from the bank's security department. Your account has been flagged for suspicious activity. Please call back within 24 hours to resolve the issue."
+    }
+]

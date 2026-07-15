@@ -2,7 +2,17 @@ import re
 
 def normalize_transcript(text):
     text = text.lower()
-    text = text.replace("cybercrime", "cyber crime")
+
+    replacements = {
+        "cybercrime": "cyber crime",
+        "cyber-crime": "cyber crime",
+        "aadhaar card": "aadhaar",
+        "aadhar card": "aadhaar",
+        "upi pin": "upi pin"
+    }
+
+    for old, new in replacements.items():
+        text = text.replace(old, new)
     return text
 
 def analyze_transcript(transcript):
@@ -11,100 +21,152 @@ def analyze_transcript(transcript):
     scam_patterns = {
 
         "Digital Arrest": {
-
             "cbi": 25,
-            "ed": 25,
-            "customs": 20,
-            "cyber crime": 20,
+            "enforcement directorate": 25,
+            "ed officer": 25,
+            "cyber crime department": 25,
+            "cyber crime cell": 25,
+            "arrest warrant": 25,
+            "video verification": 20,
+            "stay on the call": 15,
             "money laundering": 20,
-            "illegal activities": 15,
-            "aadhaar": 10,
+            "aadhaar": 15,
+            "parcel case": 15,
+            "customs": 15,
             "press one": 10,
-            "transfer": 8,
-            "bank account": 8,
+            "illegal activities": 10
         },
 
         "Bank Fraud": {
-
-            "otp": 25,
-            "cvv": 25,
+            "otp": 30,
+            "cvv": 30,
+            "upi pin": 30,
             "upi": 20,
-            "upi pin": 25,
-            "bank manager": 20,
-            "debit card": 15,
-            "credit card": 15,
+            "bank account": 15,
+            "account blocked": 20,
+            "debit card": 20,
+            "credit card": 20,
+            "net banking": 20,
             "verify account": 15,
-            "account blocked": 15,
-            "net banking": 10,
+            "bank manager": 15
         },
 
         "KYC Scam": {
-
-            "kyc": 25,
+            "kyc": 30,
+            "pan card": 20,
             "pan": 15,
             "verification": 15,
-            "update account": 15,
-            "download app": 20,
-            "install app": 20,
-            "apk": 25,
-            "click link": 15,
+            "update kyc": 25,
+            "download app": 25,
+            "install app": 25,
+            "apk": 30,
+            "click link": 20,
+            "sim blocked": 20
+        },
+
+        "Courier Scam": {
+            "parcel": 25,
+            "customs": 20,
+            "courier": 25,
+            "package": 20,
+            "shipment": 20,
+            "delivery": 15,
+            "illegal item": 25,
+            "release parcel": 20
+        },
+
+        "Investment Scam": {
+            "investment": 30,
+            "guaranteed return": 30,
+            "double money": 25,
+            "profit": 15,
+            "crypto": 25,
+            "trading": 20,
+            "stock market": 20,
+            "earn money": 20
+        },
+
+        "Lottery Scam": {
+            "lottery": 30,
+            "prize": 25,
+            "winner": 20,
+            "reward": 20,
+            "claim amount": 20,
+            "processing fee": 25
+        },
+
+        "Job Scam": {
+            "job": 20,
+            "work from home": 25,
+            "selection": 20,
+            "registration fee": 30,
+            "joining fee": 30,
+            "salary": 15,
+            "interview": 15
         }
     }
 
-    best_score = 0
-    scam_type = "Unknown"
-    detected_keywords = []
+    scores = {}
+    keyword_hits = {}
 
     for scam, words in scam_patterns.items():
-
-        current_score = 0
-        current_keywords = []
+        score = 0
+        hits = []
 
         for word, weight in words.items():
+            if word in transcript:
+                score += weight
+                hits.append(word)
+        
+        scores[scam] = score
+        keyword_hits[scam] = hits
 
-            if " " in word:
+    if ("cyber crime" in transcript and "aadhaar" in transcript):
+        scores["Digital Arrest"] += 25
+        keyword_hits["Digital Arrest"].append("cyber crime + aadhaar combination")
 
-                if word in transcript:
-                    current_keywords.append(word)
-                    current_score += weight
+    if ("otp" in transcript and "bank" in transcript):
+        scores["Bank Fraud"] += 20
+        keyword_hits["Bank Fraud"].append("otp + bank combination")
 
-            else:
+    if ("kyc" in transcript and "apk" in transcript):
+        scores["KYC Scam"] += 20
+        keyword_hits["KYC Scam"].append("kyc + apk combination")
 
-                if re.search(r"\b" + re.escape(word) + r"\b", transcript):
-                    current_keywords.append(word)
-                    current_score += weight
+    scam_type = max(scores,key=scores.get)
 
-        if current_score > best_score:
-            best_score = current_score
-            scam_type = scam
-            detected_keywords = current_keywords
+    best_score = scores[scam_type]
+    detected_keywords = keyword_hits[scam_type]
 
-    score = min(best_score, 100)
+    if best_score < 20:
+        scam_type = "Unknown"
+        best_score = 0
+        detected_keywords = []
+
+    score = min(best_score,100)
 
     if score >= 70:
         risk_level = "High"
         severity_color = "red"
-
     elif score >= 40:
         risk_level = "Medium"
         severity_color = "orange"
-
     else:
         risk_level = "Low"
         severity_color = "green"
 
-    confidence = round(score / 100, 2)
+    confidence = round(score / 100,2)
 
     if detected_keywords:
         explanation = (
-            f"Detected {len(detected_keywords)} keyword indicators: "
+            f"Detected {len(detected_keywords)} indicators: "
             + ", ".join(detected_keywords)
             + "."
         )
     else:
         explanation = (
             "No strong keyword indicators detected. "
-            "Semantic analysis will determine the final classification."
+            "Semantic and LLM analysis required."
         )
 
     return {
