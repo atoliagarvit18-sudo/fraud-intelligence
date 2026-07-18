@@ -10,6 +10,8 @@ venv/
 .venv/
 *venv*/
 agent3/venv/
+agent3/__pycache__/
+agent3/src/__pycache__/
 agent2/app/services/venvb/
 .cache/
 
@@ -17,6 +19,7 @@ agent2/app/services/venvb/
 .env
 **/.env
 *.env
+agent3/.env
 
 # Output & audio
 agent3/output/
