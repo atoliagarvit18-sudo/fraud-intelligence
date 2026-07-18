@@ -1,0 +1,41 @@
+{
+  "_comment": "Pre-staged demo scenario for ET AI Hackathon 2026 — Problem Statement 6",
+  "_scenario": "Digital Arrest + FICN coordinated campaign in Jaipur, Rajasthan",
+
+  "inputs": {
+    "currency_image_path": "../agent1/sample_data/500_fake_001.jpg",
+    "currency_denom_hint": "500",
+    "currency_location": "Jaipur Branch A",
+    "audio_path": "../agent3/audio/sample.mp3",
+    "agent2_source": "mock"
+  },
+
+  "mock_agent2_event": {
+    "available": true,
+    "severity": "critical",
+    "scam_type": "digital_arrest",
+    "campaign_score": 0.83,
+    "weighted_confidence": 0.79,
+    "post_count": 34,
+    "sources": ["telegram", "reddit"],
+    "platforms": ["ScamsIndia", "IndiaFrauds", "cybercrime_alerts_jaipur"],
+    "is_multi_source": true,
+    "locations": ["jaipur", "jodhpur", "rajasthan"],
+    "cluster_id": 7,
+    "temporal_data": {
+      "earliest_post": "2026-07-17T18:30:00+00:00",
+      "latest_post": "2026-07-18T04:00:00+00:00"
+    }
+  },
+
+  "expected_output": {
+    "severity": "CRITICAL",
+    "composite_risk_score_min": 80,
+    "unified_scam_type": "Digital Arrest",
+    "agents_active": 3,
+    "correlation_signals_min": 3,
+    "victimisation_prediction_urgency": "IMMEDIATE",
+    "evidence_package_items_min": 3,
+    "criminal_network_evidence_strength": "strong"
+  }
+}

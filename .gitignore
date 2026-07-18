@@ -1,0 +1,28 @@
+# Environments & Cache
+__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+*venv*/
+agent3/venv/
+agent2/app/services/venvb/
+.cache/
+
+# Environment variables & secrets
+.env
+**/.env
+*.env
+
+# Output & audio
+agent3/output/
+agent4/output/threat_report_*.json
+agent3/audio/*.mp3
+
+# OS generated files
+.DS_Store
+Thumbs.db

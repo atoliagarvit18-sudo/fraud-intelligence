@@ -1,0 +1,25 @@
+# Environment variables
+.env
+.env.local
+
+# Telegram session files & credentials
+sessions/
+*.session
+*.session-journal
+
+# Python & compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Logs & temporary files
+logs/
+*.log
+*.sqlite3

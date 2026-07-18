@@ -1,0 +1,598 @@
+[
+    {
+        "type": "Courier Scam",
+        "text": "Hello, this is Ramesh from Courier Services, I have a package for you with order number CS1234, please pay the delivery fee of Rs. 500 to this number 9876543210."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Namaste, I am Rohan from DHL, we have a parcel for you that has been stuck at customs due to some documents, please pay Rs. 2000 to this number 1111111111 or the package will be confiscated."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "This is Suresh from India Post, we have a special delivery for you, but you need to pay the tax of Rs. 1500 to this number 2222222222, otherwise, the package will be returned."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Good morning, this is Aarav from FedEx, we are trying to deliver a package to you, but the customs have a query about the duty, please pay Rs. 3000 to this number 3333333333 or the package will be held back."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Hello, this is Avinash from UPS, we have a package for you that has been delayed, please pay the handling fee of Rs. 1000 to this number 4444444444 to expedite the delivery."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Namaste, I am Ankit from DTDC, we have a parcel for you that needs to be cleared by the customs, please pay the clearance fee of Rs. 2500 to this number 5555555555."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "This is Harsh from Aramex, we have a special delivery for you, but you need to pay the brokerage fee of Rs. 1800 to this number 6666666666 or the package will be returned."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Good morning, this is Divyansh from Blue Dart, we are trying to deliver a package to you, but the courier charges have been increased, please pay Rs. 2800 to this number 7777777777 to avoid any delays."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Hello, this is Anurag from XPS, we have a package for you that has been stuck in transit, please pay the delivery fee of Rs. 4500 to this number 8888888888 to expedite the delivery."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Namaste, I am Abhishek from First Flight, we have a parcel for you that needs to be cleared by the customs, please pay the clearance fee of Rs. 3200 to this number 9999999999."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "This is Rohit from Ecom Express, we have a special delivery for you, but you need to pay the brokerage fee of Rs. 2200 to this number 0000000000 or the package will be returned."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Good morning, this is Sagar from GoJavas, we are trying to deliver a package to you, but the courier charges have been increased, please pay Rs. 3800 to this number 8888888888 to avoid any delays."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Hello, this is Prateek from Delhivery, we have a package for you that has been stuck in transit, please pay the delivery fee of Rs. 5100 to this number 7777777777 to expedite the delivery."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Namaste, I am Kartik from Amazon Logistics, we have a parcel for you that needs to be cleared by the customs, please pay the clearance fee of Rs. 4600 to this number 6666666666."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "This is Vivek from Flipkart Logistics, we have a special delivery for you, but you need to pay the brokerage fee of Rs. 2600 to this number 5555555555 or the package will be returned."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Good morning, this is Ashish from Shadowfax, we are trying to deliver a package to you, but the courier charges have been increased, please pay Rs. 4200 to this number 4444444444 to avoid any delays."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Hello, this is Kushagra from Zepto, we have a package for you that has been stuck in transit, please pay the delivery fee of Rs. 5500 to this number 9999999999 to expedite the delivery."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Namaste, I am Aarav from JusPay, we have a parcel for you that needs to be cleared by the customs, please pay the clearance fee of Rs. 4800 to this number 2222222222."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "This is Suyash from Myles, we have a special delivery for you, but you need to pay the brokerage fee of Rs. 2400 to this number 1111111111 or the package will be returned."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Good morning, this is Pranav from Porter, we are trying to deliver a package to you, but the courier charges have been increased, please pay Rs. 5000 to this number 3333333333 to avoid any delays."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Hello, this is Abhinav from Sendinblue, we have a package for you that has been stuck in transit, please pay the delivery fee of Rs. 5700 to this number 8888888888 to expedite the delivery."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Namaste, I am Yash from Shiprocket, we have a parcel for you that needs to be cleared by the customs, please pay the clearance fee of Rs. 5000 to this number 7777777777."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "This is Siddharth from DTDC Courier, we have a special delivery for you, but you need to pay the brokerage fee of Rs. 2700 to this number 5555555555 or the package will be returned."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Good morning, this is Shubham from XpressBees, we are trying to deliver a package to you, but the courier charges have been increased, please pay Rs. 5200 to this number 4444444444 to avoid any delays."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Hello, this is Aman from Delhivery, we have a package for you that has been stuck in transit, please pay the delivery fee of Rs. 5900 to this number 6666666666 to expedite the delivery."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Hello, this is Ramesh from Speed Courier. We have a package for you in Delhi. Please verify your ID and sign on the delivery slip."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Your package from Flipkart is stuck in customs due to a discrepancy. Please pay the duty and we will deliver it to you."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "This is Rohan from Blue Dart. We need to deliver a package to you but it requires a signature from an authorized person. Can we verify your identity first?"
+    },
+    {
+        "type": "Courier Scam",
+        "text": "We've received a complaint about a suspicious package with your name on it. Please come down to our office to verify the package and sign a release form."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Your package from Amazon has been delayed due to a customs issue. We need you to pay the duty and we will redeliver it to you."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "This is an official message from the Delhi Police. We need to verify your identity and address to deliver a package related to a court case."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Your package from Flipkart is stuck at the courier hub. Please pay the storage charges and we will deliver it to you."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "This is an official call from the CBI. We need to verify your identity and address to deliver a package related to a fraud case."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "We've received a package with your name on it, but it's not cleared by customs. Please come down to our office to verify the package and sign a release form."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Your package from Amazon has been delayed due to a technical issue. We need you to pay the re-delivery charges and we will deliver it to you."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "This is a message from the ED. We need to verify your identity and address to deliver a package related to a money laundering case."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "We've received a package with your name on it, but it's not cleared by the courier company. Please come down to our office to verify the package and sign a release form."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "This is an official call from the Cyber Crime Cell. We need to verify your identity and address to deliver a package related to a cyber crime case."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "This is a message from the Narcotics Department. We need to verify your identity and address to deliver a package related to a narcotics case."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "This is an official call from the Customs Department. We need to verify your identity and address to deliver a package related to a customs case."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "We'll need you to verify your ID and sign on the delivery slip for the package we have for you."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Hello, your courier package has been detained due to customs regulations. Please call us to resolve the issue and confirm your delivery."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "This is the courier service, we have a package awaiting delivery at your location. Our driver is on the way, please verify your identity to receive the package."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "We have a confidential parcel for you, but our records indicate a discrepancy in your address. Can you confirm your identity over the phone?"
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Your package has been seized due to suspected narcotics. Call us immediately to clear the customs and arrange for a re-delivery."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "We've received an alert about a suspicious parcel in your name. Please respond with your PAN number to confirm your identity and receive the package."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Hello, we have an international delivery for you that requires an additional customs fee. Please settle the payment over the phone to receive your package."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "There is a parcel at your doorstep, but our system shows it was tampered with. Can you confirm your identity to receive the package without any issues?"
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Your package has been held at the courier facility due to an issue with your Aadhaar card. Please verify your identity to clear the issue."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "This is the courier service, we have a package that requires a signature upon delivery. Can you confirm your identity over the phone?"
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Our records indicate that your package has been rescheduled for delivery. Please verify your identity to confirm the new delivery date."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "We have a package for you that requires an additional customs fee. Please settle the payment over the phone to receive your package."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Hello, we have an issue with your package that requires your attention. Please verify your identity to resolve the issue."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Our system shows that your package has been damaged during transit. Please confirm your identity to arrange for a re-delivery."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "We have a parcel at your doorstep that requires a signature upon delivery. Can you confirm your identity over the phone?"
+    },
+    {
+        "type": "Courier Scam",
+        "text": "This is the courier service, we have a package that requires an additional customs fee. Please settle the payment over the phone to receive your package."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Your package has been delayed due to customs regulations. Please verify your identity to clear the issue and receive your package."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Hello, this is Mr. Saxena from DHL. Your parcel has been delayed due to customs clearance issues. Please pay the customs duty online to receive your package."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "This is a message from FedEx. Your package has been seized by the authorities due to suspicious activity. Please contact us to arrange a re-delivery fee."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Hi, I'm calling from UPS. Your parcel has been held at the airport due to a discrepancy in the shipping information. We need you to pay a small fee to release it."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "This is a message from Aramex. Your package has been tampered with and we need you to verify its contents. Please pay a small fee to receive a verification code."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Hello, this is a representative from Bluestar. Your package has been delivered but our driver couldn't reach you. Please pay a re-delivery fee to receive your package."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Hi, I'm calling from DTDC. Your parcel has been delayed due to a technical issue. We need you to pay a small fee to expedite its delivery."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "This is a message from Xpressbees. Your package has been lost in transit and we need you to pay a small fee to locate it."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Hello, this is a representative from Delhivery. Your parcel has been seized by the authorities due to a discrepancy in the shipping information. Please contact us to arrange a re-delivery fee."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Hi, I'm calling from Ecom Express. Your package has been tampered with and we need you to verify its contents. Please pay a small fee to receive a verification code."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "This is a message from GATI. Your parcel has been delayed due to customs clearance issues. Please pay the customs duty online to receive your package."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Hello, this is a representative from JPD. Your package has been delivered but our driver couldn't reach you. Please pay a re-delivery fee to receive your package."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Hi, I'm calling from Kernal. Your package has been lost in transit and we need you to pay a small fee to locate it."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "This is a message from SRF. Your parcel has been seized by the authorities due to a discrepancy in the shipping information. Please contact us to arrange a re-delivery fee."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Hello, this is a representative from DTDC. Your package has been tampered with and we need you to verify its contents. Please pay a small fee to receive a verification code."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Hi, I'm calling from JNPT. Your package has been delayed due to customs clearance issues. Please pay the customs duty online to receive your package."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "This is a message from DPD. Your package has been lost in transit and we need you to pay a small fee to locate it."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Hello, this is a representative from Aramex. Your package has been seized by the authorities due to a discrepancy in the shipping information. Please contact us to arrange a re-delivery fee."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Hi, I'm calling from First Flight. Your package has been delayed due to technical issues. We need you to pay a small fee to expedite its delivery."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "This is a message from GMR. Your parcel has been tampered with and we need you to verify its contents. Please pay a small fee to receive a verification code."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Hello, this is a representative from KPL. Your package has been delivered but our driver couldn't reach you. Please pay a re-delivery fee to receive your package."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Hi, I'm calling from Blue Dart. Your package has been lost in transit and we need you to pay a small fee to locate it."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "This is a message from Go Air. Your parcel has been delayed due to customs clearance issues. Please pay the customs duty online to receive your package."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Hello, this is a representative from Spice Jet. Your package has been seized by the authorities due to a discrepancy in the shipping information. Please contact us to arrange a re-delivery fee."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Hi, I'm calling from Vistara. Your package has been tampered with and we need you to verify its contents. Please pay a small fee to receive a verification code."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "This is a message from AirAsia. Your parcel has been lost in transit and we need you to pay a small fee to locate it."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Hello, this is a representative from IndiGo. Your package has been delayed due to technical issues. We need you to pay a small fee to expedite its delivery."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Hello, this is courier delivery service, we have a package for you from Flipkart, please provide your address to receive it."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Sir, we have a parcel at our local depot, we need your Aadhaar card to verify your identity before handing it over."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "This is a delivery confirmation from DHL, please pay Rs 500 to receive your parcel, and we need your PAN card details to process the payment."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "We have a priority delivery for you from Amazon, but we need you to pay Rs 1000 to expedite the delivery, and we will send you the tracking number."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "This is a message from the Indian Postal Service, we have a package for you that requires your signature upon delivery, please come to our office to collect it."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "We are experiencing technical difficulties with the delivery of your parcel from Snapdeal, please pay Rs 200 to resolve the issue, and we will send you the tracking number."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Sir, we have a parcel that has been stuck in customs, we need your help to clear the customs formalities, please pay Rs 1500 to expedite the process."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Hello, this is a delivery notification from Bluedart, we have a package for you, but we need your help to resolve the delivery issue, please pay Rs 800 to resolve it."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "We have a parcel from eBay that requires your signature upon delivery, please come to our office to collect it, and we will need your Aadhaar card details to verify your identity."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "This is a message from the courier service, we have a package for you that has been delayed due to customs issues, please pay Rs 1200 to expedite the delivery."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Sir, we have a parcel that has been stuck in our warehouse, we need your help to clear the warehouse formalities, please pay Rs 900 to expedite the process."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "We are experiencing technical difficulties with the delivery of your parcel from Flipkart, please pay Rs 600 to resolve the issue, and we will send you the tracking number."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Hello, this is a delivery notification from DTDC, we have a package for you, but we need your help to resolve the delivery issue, please pay Rs 1100 to resolve it."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "We have a parcel from Reliance that requires your signature upon delivery, please come to our office to collect it, and we will need your Aadhaar card details to verify your identity."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "This is a message from the courier service, we have a package for you that has been delayed due to customs issues, please pay Rs 1800 to expedite the delivery."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Sir, we have a parcel that has been stuck in our warehouse, we need your help to clear the warehouse formalities, please pay Rs 1400 to expedite the process."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "We are experiencing technical difficulties with the delivery of your parcel from Amazon, please pay Rs 400 to resolve the issue, and we will send you the tracking number."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Hello, this is a delivery notification from Xpressbees, we have a package for you, but we need your help to resolve the delivery issue, please pay Rs 1000 to resolve it."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "We have a parcel from Snapdeal that requires your signature upon delivery, please come to our office to collect it, and we will need your PAN card details to verify your identity."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "This is a message from the courier service, we have a package for you that has been delayed due to customs issues, please pay Rs 2400 to expedite the delivery."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Sir, we have a parcel that has been stuck in our warehouse, we need your help to clear the warehouse formalities, please pay Rs 2000 to expedite the process."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "We are experiencing technical difficulties with the delivery of your parcel from Flipkart, please pay Rs 700 to resolve the issue, and we will send you the tracking number."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Hello, this is a delivery notification from Delhivery, we have a package for you, but we need your help to resolve the delivery issue, please pay Rs 1300 to resolve it."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "This is a message from the courier service, we have a package for you that has been delayed due to customs issues, please pay Rs 3000 to expedite the delivery."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Sir, we have a parcel that has been stuck in our warehouse, we need your help to clear the warehouse formalities, please pay Rs 2200 to expedite the process."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "We are experiencing technical difficulties with the delivery of your parcel from Snapdeal, please pay Rs 500 to resolve the issue, and we will send you the tracking number."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Good evening, sir. This is courier services, we have a package for you from a relative in the Middle East."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Hello, you have a parcel from Amazon that needs to be delivered to a different address."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "This is the courier company, we've got a parcel for you from your aunt in Dubai."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "We have a package from the UK that requires your signature, sir."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "We've got a delivery for you from Flipkart, but it's stuck at customs."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Hi, this is a courier company, we've got a parcel for you from the US."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "We need you to sign for this parcel from DHL, sir."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "We've got a delivery for you from your cousin in the UAE."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "You have a package from the UK that requires payment, sir."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "We've got a parcel from a relative in the US, but there's a problem with the delivery."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "We need to deliver a package to you from the US, but you need to pay the customs fee."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "We've got a delivery for you from your friend in Dubai, but there's a problem with the package."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "You have a package from the UK that needs to be delivered to a different address."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Hi, this is a courier company, we've got a parcel for you from the US, but it's stuck in customs."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "We need you to sign for this parcel from FedEx, sir."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "We've got a delivery for you from your relative in the US, but you need to pay the delivery fee."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "We've got a parcel from the UK that requires your signature, sir."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "We need to deliver a package to you from the US, but you need to pay the customs duty."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "You have a package from the US that needs to be delivered to a different address."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "We've got a delivery for you from your friend in the UAE."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "We need you to sign for this parcel from UPS, sir."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "We've got a package from the UK that's stuck in customs, sir."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "We need to deliver a package to you from the US, but you need to pay the delivery charges."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "You have a package from the US that requires your signature, sir."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "We've got a delivery for you from your relative in the UK."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Hello, this is from the courier department. We have a package for you, but you need to verify your address first."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "I'm calling from DHL. Your package has been detained at the customs due to a discrepancy in the address. Please pay the duty and we'll deliver it to you."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Hi, this is from Fedex. We have a package for you, but it's been stuck in the clearance process. We need you to pay the clearance fees and we'll deliver it to you."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Hello, this is from UPS. Your package has been seized by the customs due to a suspected narcotics shipment. Please pay the fine and we'll deliver it to you."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "I'm calling from a courier company. We need you to verify your ID and pay the delivery charge for your package."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Hi, this is from a courier service. We have a package for you, but it's been delayed due to a customs issue. We need you to pay the customs fees and we'll deliver it to you."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Hello, this is from a delivery company. We need you to pay the delivery charge and we'll deliver your package to you."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "I'm calling from a courier service. We have a package for you, but it's been stuck in the clearance process. We need you to pay the clearance fees and we'll deliver it to you."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Hi, this is from a courier company. We need you to verify your ID and pay the delivery charge for your package."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Hello, this is from a delivery service. We have a package for you, but it's been delayed due to a customs issue. We need you to pay the customs fees and we'll deliver it to you."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "I'm calling from a courier company. We need you to pay the delivery charge and we'll deliver your package to you."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Hello, this is from DHL. Your package has been detained at the customs due to a discrepancy in the address. Please pay the duty and we'll deliver it to you."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "I'm calling from a courier service. We need you to verify your ID and pay the delivery charge for your package."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Hi, this is from a delivery company. We have a package for you, but it's been delayed due to a customs issue. We need you to pay the customs fees and we'll deliver it to you."
+    },
+    {
+        "type": "Courier Scam",
+        "text": "Hello, this is from a courier company. We need you to pay the delivery charge and we'll deliver your package to you."
+    }
+]
