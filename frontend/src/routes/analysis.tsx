@@ -61,7 +61,7 @@ function Analysis() {
           <div className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground">Step 1 of 3</div>
           <h1 className="mt-1 text-3xl font-semibold" style={{ fontFamily: "var(--font-display)" }}>Submit evidence</h1>
           <p className="mt-2 max-w-2xl text-sm text-muted-foreground">
-            Provide any combination of evidence. Each source is routed to a specialized AI agent — more sources yield a higher-confidence verdict. Analysis runs against live threat intelligence.
+            Provide any combination of evidence. Agent 1 inspects currency/documents, Agent 3 analyzes call audio, and Agent 2 correlates text/phone queries against its live MongoDB feed of scraped Reddit posts, Telegram channels, and National Cybercrime Complaints.
           </p>
         </div>
 
@@ -146,8 +146,8 @@ function Analysis() {
                   <MessageSquare size={18} />
                 </div>
                 <div>
-                  <div className="text-sm font-semibold">SMS / email</div>
-                  <div className="text-[11px] text-muted-foreground">Paste suspicious message</div>
+                  <div className="text-sm font-semibold">OSINT Text / Keyword Query</div>
+                  <div className="text-[11px] text-muted-foreground">Query Reddit, Telegram & complaints DB</div>
                 </div>
                 {text && <Check size={14} className="ml-auto text-[color:var(--neon-blue)]" />}
               </div>
@@ -156,7 +156,7 @@ function Analysis() {
                 value={text}
                 onChange={(e) => setText(e.target.value)}
                 className="text-mono w-full resize-none rounded-xl border border-white/10 bg-black/20 p-3 text-xs placeholder:text-muted-foreground focus:outline-none focus:border-white/30"
-                placeholder="Paste suspicious SMS or email…"
+                placeholder="Paste suspicious text, message, or keyword to query against Agent 2's live MongoDB feed…"
               />
               <div className="mt-2 flex items-center justify-between text-[10px] text-muted-foreground">
                 <button onClick={() => setText(SAMPLE_TEXT)} className="rounded-md border border-white/10 bg-white/5 px-2 py-1 hover:bg-white/10">Autofill sample</button>

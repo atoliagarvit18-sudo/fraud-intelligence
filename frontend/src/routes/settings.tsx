@@ -18,9 +18,9 @@ function Settings() {
         <GlassCard>
           <div className="text-sm font-semibold">Analyst profile</div>
           <div className="mt-3 grid gap-3 sm:grid-cols-2">
-            <Field label="Name" value="Ananya Sharma" />
-            <Field label="Role" value="Senior Analyst" />
-            <Field label="Team" value="Cyber Fraud Response" />
+            <Field label="Name" value="HackTeam" />
+            <Field label="Role" value="ET AI Hackathon 2.0" />
+            <Field label="Team" value="Fraud Intelligence" />
             <Field label="Clearance" value="Tier 3" />
           </div>
         </GlassCard>

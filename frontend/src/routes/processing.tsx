@@ -15,7 +15,7 @@ export const Route = createFileRoute("/processing")({
 const STAGES = [
   { key: "speech",  label: "Speech Intelligence",  icon: AudioLines, agentLabel: "Agent 3 — Call Analysis" },
   { key: "visual",  label: "Visual Intelligence",   icon: ScanEye,    agentLabel: "Agent 1 — Currency CV" },
-  { key: "text",    label: "OSINT Intelligence",    icon: FileText,   agentLabel: "Agent 2 — Campaign Intel" },
+  { key: "text",    label: "OSINT Campaign Intel",  icon: FileText,   agentLabel: "Agent 2 — Reddit/Telegram Scraper" },
   { key: "network", label: "Network Intelligence",  icon: Network,    agentLabel: "Agent 4 — Fusion Engine" },
 ] as const;
 
@@ -24,7 +24,8 @@ const BOOT_LOGS = [
   "[AGENT1] loading OpenCV currency classifier...",
   "[AGENT1] processing note image — deskewing, feature extraction",
   "[AGENT2] connecting to MongoDB fraud_intelligence.events...",
-  "[AGENT2] querying campaign clusters (severity: critical → high)...",
+  "[AGENT2] scraping live feeds: Reddit r/India, Telegram channels, National Cybercrime Portal...",
+  "[AGENT2] clustering threat vectors (Digital Arrest & financial fraud patterns)...",
   "[AGENT3] loading Whisper ASR model...",
   "[AGENT3] running keyword + semantic + Groq LLM analyzers...",
   "[FUSION] cross-agent correlation engine initializing...",

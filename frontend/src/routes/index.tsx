@@ -12,10 +12,10 @@ export const Route = createFileRoute("/")({
 });
 
 const features = [
-  { icon: AudioLines, title: "Speech Intelligence", desc: "Detect coercive tone, scripted patterns and synthetic voices in call recordings.", color: "var(--neon-cyan)" },
-  { icon: FileText,   title: "Text Intelligence",   desc: "Uncover threat framing, urgency cues and known scam signatures in messages.",      color: "var(--neon-blue)" },
-  { icon: ScanEye,    title: "Visual Intelligence",  desc: "Spot forged IDs, doctored screenshots and counterfeit documents in seconds.",       color: "var(--neon-violet)" },
-  { icon: Network,    title: "Network Intelligence", desc: "Cross-reference numbers, accounts and IPs against live scam clusters.",            color: "var(--risk-medium)" },
+  { icon: ScanEye,    title: "Agent 1 — Visual Intel", desc: "OpenCV currency verification, fake ID detection and document forgery analysis.", color: "var(--neon-violet)" },
+  { icon: FileText,   title: "Agent 2 — OSINT Campaign Intel", desc: "Live scraping of Reddit, Telegram & cybercrime complaints into MongoDB to track campaigns.", color: "var(--neon-blue)" },
+  { icon: AudioLines, title: "Agent 3 — Speech Intel", desc: "Detect coercive tone, scripted patterns and synthetic voice artifacts in call recordings.", color: "var(--neon-cyan)" },
+  { icon: Network,    title: "Agent 4 — Network Fusion", desc: "Cross-references all agents, maps criminal operator networks and projects 24h/48h victim surge.", color: "var(--risk-medium)" },
 ];
 
 const stats = [

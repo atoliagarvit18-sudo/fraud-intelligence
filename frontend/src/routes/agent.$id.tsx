@@ -14,11 +14,11 @@ export const Route = createFileRoute("/agent/$id")({
   ),
 });
 
-const meta: Record<AgentKey, { title: string; icon: typeof AudioLines }> = {
-  speech: { title: "Speech Intelligence Agent", icon: AudioLines },
-  text: { title: "Text Intelligence Agent", icon: FileText },
-  visual: { title: "Visual Intelligence Agent", icon: ScanEye },
-  network: { title: "Network Intelligence Agent", icon: Network },
+const meta: Record<AgentKey, { title: string; agentName: string; icon: typeof AudioLines }> = {
+  speech: { title: "Speech Intelligence Agent", agentName: "Agent 3 — Call & Audio Analysis Engine", icon: AudioLines },
+  text: { title: "OSINT Campaign Intelligence Agent", agentName: "Agent 2 — Reddit, Telegram & Cybercrime Complaints Scraper", icon: FileText },
+  visual: { title: "Visual Intelligence Agent", agentName: "Agent 1 — Currency CV & Document Forensics", icon: ScanEye },
+  network: { title: "Network & Fusion Intelligence Agent", agentName: "Agent 4 — Multi-Agent Correlation Engine", icon: Network },
 };
 
 function AgentPage() {
@@ -44,7 +44,7 @@ function AgentPage() {
               <info.icon size={24} />
             </div>
             <div className="min-w-0 flex-1">
-              <div className="text-xs uppercase tracking-widest text-muted-foreground">Agent</div>
+              <div className="text-xs uppercase tracking-widest text-muted-foreground">{info.agentName}</div>
               <h1 className="text-2xl font-semibold" style={{ fontFamily: "var(--font-display)" }}>{info.title}</h1>
             </div>
             <div className="flex flex-col items-end">
@@ -137,7 +137,12 @@ function TextDetail() {
   return (
     <div className="grid gap-6 lg:grid-cols-2">
       <GlassCard>
-        <div className="text-sm font-semibold">Detected entities</div>
+        <div className="flex items-center justify-between">
+          <div className="text-sm font-semibold">Scraped OSINT Entities</div>
+          <span className="inline-flex items-center gap-1 rounded-full border border-[color:var(--neon-cyan)]/30 bg-[color:var(--neon-cyan)]/10 px-2.5 py-0.5 text-[10px] text-[color:var(--neon-cyan)]">
+            ● Live MongoDB Feed
+          </span>
+        </div>
         <div className="mt-3 grid gap-2 sm:grid-cols-2">
           {d.entities.map((e) => (
             <div key={e.label} className="rounded-lg border border-white/10 bg-white/5 p-3">
@@ -146,21 +151,29 @@ function TextDetail() {
             </div>
           ))}
         </div>
+        <div className="mt-4 pt-3 border-t border-white/10 flex flex-wrap items-center justify-between text-xs text-muted-foreground">
+          <span>Active Collectors:</span>
+          <div className="flex gap-1.5">
+            <span className="rounded-md bg-white/10 px-2 py-0.5 text-[10px]">Reddit r/India</span>
+            <span className="rounded-md bg-white/10 px-2 py-0.5 text-[10px]">Telegram Channels</span>
+            <span className="rounded-md bg-white/10 px-2 py-0.5 text-[10px]">Cybercrime Portal</span>
+          </div>
+        </div>
       </GlassCard>
       <GlassCard>
         <div className="flex items-center justify-between">
-          <div className="text-sm font-semibold">Threat classification</div>
+          <div className="text-sm font-semibold">Campaign Threat Cluster</div>
           <RiskBadge tier={d.threatLevel} />
         </div>
-        <div className="mt-4 text-[10px] uppercase tracking-widest text-muted-foreground">Category</div>
+        <div className="mt-4 text-[10px] uppercase tracking-widest text-muted-foreground">Matched Campaign Type</div>
         <div className="mt-1 text-lg font-semibold" style={{ fontFamily: "var(--font-display)" }}>{d.category}</div>
-        <div className="mt-4 text-[10px] uppercase tracking-widest text-muted-foreground">Keywords</div>
+        <div className="mt-4 text-[10px] uppercase tracking-widest text-muted-foreground">Scraped Threat Keywords</div>
         <div className="mt-2 flex flex-wrap gap-2">
           {d.keywords.map((k) => <Chip key={k} tone="danger">{k}</Chip>)}
         </div>
       </GlassCard>
       <GlassCard className="lg:col-span-2">
-        <div className="text-sm font-semibold">Reasoning</div>
+        <div className="text-sm font-semibold">OSINT Scraper & MongoDB Correlation Reasoning</div>
         <p className="mt-2 text-sm text-muted-foreground">{d.reasoning}</p>
       </GlassCard>
     </div>

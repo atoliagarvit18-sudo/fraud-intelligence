@@ -57,11 +57,11 @@ export function TopBar() {
         <div className="flex items-center gap-3 rounded-lg border border-white/10 bg-white/5 px-3 py-1.5">
           <div className="grid h-7 w-7 place-items-center rounded-full text-xs font-semibold"
             style={{ background: "linear-gradient(135deg, var(--neon-blue), var(--neon-violet))" }}>
-            AS
+            HT
           </div>
           <div className="hidden text-left leading-tight md:block">
-            <div className="text-xs font-medium">Ananya S.</div>
-            <div className="text-[10px] text-muted-foreground">Senior Analyst</div>
+            <div className="text-xs font-medium">HackTeam</div>
+            <div className="text-[10px] text-muted-foreground">ET AI Hackathon 2.0</div>
           </div>
         </div>
       </div>
