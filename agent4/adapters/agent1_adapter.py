@@ -79,9 +79,16 @@ def run(
         return {**base, **_mock_result(location), "fallback_used": True}
 
     # Determine availability from status
-    result["available"] = result.get("status") in (
+    is_ok = result.get("status") in (
         "ok", "flagged_low_denomination_confidence"
-    )
+    ) and result.get("verdict") is not None
+
+    if not is_ok:
+        status_msg = result.get("status") or "unknown_error"
+        base["error"] = f"Agent 1 returned status '{status_msg}' (note/ID contour not detected or unreadable) — falling back to mock"
+        return {**base, **_mock_result(location), "fallback_used": True}
+
+    result["available"] = True
     result["location"] = location
     result.setdefault("error", None)
     result["fallback_used"] = False
