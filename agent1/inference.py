@@ -15,7 +15,12 @@ import cv2
 import numpy as np
 import pickle
 import json
-import imagehash
+try:
+    import imagehash
+    _HAS_IMAGEHASH = True
+except ImportError:
+    _HAS_IMAGEHASH = False
+
 from PIL import Image
 from datetime import datetime
 
@@ -31,7 +36,12 @@ OUT_WIDTH, OUT_HEIGHT = 1000, 450
 # ---- Phase 2: preprocessing ----
 
 def find_note_contour(img):
-    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    if img is None or img.size == 0 or len(img.shape) < 2:
+        return None
+    if len(img.shape) == 3:
+        gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    else:
+        gray = img.copy()
     blurred = cv2.GaussianBlur(gray, (5, 5), 0)
     edges = cv2.Canny(blurred, 30, 100)
     edges = cv2.dilate(edges, np.ones((5, 5), np.uint8), iterations=2)
@@ -154,14 +164,28 @@ def detect_denomination(normalized_img):
 _KNOWN_FAKE_FINGERPRINTS = []  # list of (hash, detection_record)
 CLUSTER_THRESHOLD = 12
 
+def _pure_numpy_phash(normalized_img):
+    gray = cv2.cvtColor(normalized_img, cv2.COLOR_BGR2GRAY)
+    small = cv2.resize(gray, (16, 16), interpolation=cv2.INTER_AREA)
+    diff = small > np.median(small)
+    return int(sum((1 << i) if v else 0 for i, v in enumerate(diff.flatten())))
+
 def fingerprint(normalized_img):
-    pil_img = Image.fromarray(cv2.cvtColor(normalized_img, cv2.COLOR_BGR2RGB))
-    return imagehash.phash(pil_img, hash_size=16)
+    if _HAS_IMAGEHASH:
+        pil_img = Image.fromarray(cv2.cvtColor(normalized_img, cv2.COLOR_BGR2RGB))
+        return imagehash.phash(pil_img, hash_size=16)
+    return _pure_numpy_phash(normalized_img)
 
 def match_batch(note_hash):
     """Compare against known fake fingerprints; return matched batch id or None."""
     for known_hash, record in _KNOWN_FAKE_FINGERPRINTS:
-        if note_hash - known_hash <= CLUSTER_THRESHOLD:
+        if _HAS_IMAGEHASH and not isinstance(note_hash, int) and not isinstance(known_hash, int):
+            dist = note_hash - known_hash
+        else:
+            # integer hamming distance fallback
+            xor = int(note_hash) ^ int(known_hash)
+            dist = bin(xor).count('1')
+        if dist <= CLUSTER_THRESHOLD:
             return record['batch_id']
     return None
 

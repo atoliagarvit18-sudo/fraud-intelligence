@@ -69,7 +69,11 @@ def simulate_feed(image_paths, denom_hints=None, delay_seconds=0.0, max_images=N
 
 
 def build_circulation_map(detections, output_path):
-    import folium
+    try:
+        import folium
+    except ImportError:
+        print("[INFO] folium module not installed — skipping HTML circulation map generation.")
+        return None
 
     fake_detections = [d for d in detections if d.get("verdict") == "fake"]
     if not fake_detections:
@@ -95,8 +99,7 @@ def build_circulation_map(detections, output_path):
                       f"Batch: {batch_id}<br>"
                       f"Time: {d['timestamp']}")
 
-        import folium as _f
-        _f.CircleMarker(
+        folium.CircleMarker(
             location=d["location_coords"],
             radius=8,
             popup=popup_text,

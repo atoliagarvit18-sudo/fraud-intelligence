@@ -21,7 +21,12 @@ import os
 OUT_WIDTH, OUT_HEIGHT = 1000, 450  # standard note aspect ratio ~2.2:1
 
 def find_note_contour(img):
-    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    if img is None or img.size == 0 or len(img.shape) < 2:
+        return None
+    if len(img.shape) == 3:
+        gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    else:
+        gray = img.copy()
     blurred = cv2.GaussianBlur(gray, (5, 5), 0)
     edges = cv2.Canny(blurred, 30, 100)
     edges = cv2.dilate(edges, np.ones((5, 5), np.uint8), iterations=2)
@@ -113,6 +118,9 @@ if __name__ == "__main__":
     LOG_ROOT = os.path.join(_ROOT, "metadata")
 
     for ROOT in ROOT_DIRS:
+        if not os.path.exists(ROOT):
+            print(f"[SKIP] Raw dataset folder not found: {ROOT} (See DATA.md for download instructions)")
+            continue
         category = os.path.basename(ROOT)  # 'genuine' or 'fake'
         for denom in sorted(os.listdir(ROOT)):
             denom_path = os.path.join(ROOT, denom)

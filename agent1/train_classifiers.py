@@ -21,8 +21,8 @@ try:
 except AttributeError:
     pass
 
-DATASET_ROOT = "/home/claude/agent1_dataset"
-MODELS_ROOT = "/home/claude/agent1_dataset/models"
+DATASET_ROOT = os.path.dirname(os.path.abspath(__file__))
+MODELS_ROOT = os.path.join(DATASET_ROOT, "models")
 os.makedirs(MODELS_ROOT, exist_ok=True)
 
 DENOMINATIONS = ['10', '20', '50', '100', '200', '500']
@@ -44,11 +44,14 @@ def lbp_histogram(gray, n_bins=32):
     return hist / (hist.sum() + 1e-6)
 
 
-def extract_features(img_path):
-    if not os.path.exists(img_path):
-        return None
-    img = cv2.imread(img_path)
-    if img is None:
+def extract_features(img_or_path):
+    if isinstance(img_or_path, str):
+        if not os.path.exists(img_or_path):
+            return None
+        img = cv2.imread(img_or_path)
+    else:
+        img = img_or_path
+    if img is None or img.size == 0:
         return None
     img = cv2.resize(img, (300, 135))
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -124,7 +127,11 @@ def build_feature_dataset(denom, split_manifest, dataset_root):
 
 
 def train_all_denominations():
-    with open(f"{DATASET_ROOT}/metadata/train_test_split.json") as f:
+    split_file = os.path.join(DATASET_ROOT, "metadata", "train_test_split.json")
+    if not os.path.exists(split_file):
+        print(f"[SKIP] Metadata split file not found: {split_file} (requires raw training dataset. See DATA.md)")
+        return {}
+    with open(split_file) as f:
         split_manifest = json.load(f)
 
     all_results = {}
@@ -176,7 +183,9 @@ def train_all_denominations():
         all_results[denom] = result
         print(f"Model saved to {model_path}")
 
-    with open(f"{DATASET_ROOT}/metadata/phase3_training_results.json", 'w') as f:
+    meta_dir = os.path.join(DATASET_ROOT, "metadata")
+    os.makedirs(meta_dir, exist_ok=True)
+    with open(os.path.join(meta_dir, "phase3_training_results.json"), 'w') as f:
         json.dump(all_results, f, indent=2)
 
     print("\n\n=== SUMMARY ===")
