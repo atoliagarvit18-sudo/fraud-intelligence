@@ -34,6 +34,8 @@ function Analysis() {
 
   const handleAnalyze = async () => {
     if (filled === 0 || isLoading) return;
+    // Mark loading first so /processing sees isLoading=true immediately
+    useAnalysis.setState({ isLoading: true, error: null });
     nav({ to: "/processing" });
     const result = await analyzeEvidence({
       audio: audioRef.current,
@@ -43,9 +45,11 @@ function Analysis() {
       url:   url   || undefined,
     });
     if (!result) {
-      toast.error("Analysis failed — falling back to demo data", {
-        description: "Ensure the API server is running on :8000",
+      // Backend unavailable — fall back to demo data so the flow still works
+      toast.error("API server unavailable — running in demo mode", {
+        description: "Start the Python backend on :8000 for live analysis.",
       });
+      // Keep isLoading false (already set by analyzeEvidence) so /processing redirects to dashboard with mock data
     }
   };
 

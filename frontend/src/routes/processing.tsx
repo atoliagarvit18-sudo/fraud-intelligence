@@ -37,7 +37,7 @@ const BOOT_LOGS = [
 
 function Processing() {
   const nav = useNavigate();
-  const { activeCase, isLoading, selectSample } = useAnalysis();
+  const { activeCase, isLoading, loadingSessionId, selectSample } = useAnalysis();
 
   const [stage, setStage]           = useState(-1);
   const [logs, setLogs]             = useState<string[]>([]);
@@ -45,7 +45,22 @@ function Processing() {
   const logRef     = useRef<HTMLDivElement>(null);
   const bootLogIdx = useRef(0);
 
-  useEffect(() => { selectSample(activeCase.caseId); }, []);
+  // Guard: if someone hits /processing directly (no active session, not loading),
+  // redirect to /analysis so they start from the form instead of crashing.
+  useEffect(() => {
+    if (!isLoading && !loadingSessionId) {
+      // Allow a short grace period in case the state just got set
+      const t = setTimeout(() => {
+        const s = useAnalysis.getState();
+        if (!s.isLoading && !s.loadingSessionId) {
+          nav({ to: "/analysis" });
+        }
+      }, 800);
+      return () => clearTimeout(t);
+    }
+  }, []);
+
+  useEffect(() => { if (activeCase?.caseId) selectSample(activeCase.caseId); }, []);
 
   useEffect(() => {
     let cancelled = false;
