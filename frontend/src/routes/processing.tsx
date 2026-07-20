@@ -116,10 +116,10 @@ function Processing() {
     if (!isLoading) {
       const c = useAnalysis.getState().activeCase;
       setLiveScores({
-        speech:  c.agents.speech.score,
-        visual:  c.agents.visual.score,
-        text:    c.agents.text.score,
-        network: c.agents.network.score,
+        speech:  c.agents?.speech?.score  ?? 0,
+        visual:  c.agents?.visual?.score  ?? 0,
+        text:    c.agents?.text?.score    ?? 0,
+        network: c.agents?.network?.score ?? 0,
       });
     }
   }, [isLoading]);
@@ -139,7 +139,7 @@ function Processing() {
           <div className="grid gap-4 md:grid-cols-2">
             {STAGES.map((sg, i) => {
               const status = stage > i ? "complete" : stage === i ? "scanning" : "idle";
-              const score  = liveScores[sg.key] ?? (status === "complete" ? activeCase.agents[sg.key].score : 0);
+              const score  = liveScores[sg.key] ?? (status === "complete" ? (activeCase.agents?.[sg.key]?.score ?? 0) : 0);
               const tier   = tierFromScore(score);
               const color  = tierColor(tier);
               return (
