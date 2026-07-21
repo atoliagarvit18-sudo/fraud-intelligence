@@ -194,7 +194,9 @@ class TelegramCollector:
         Disconnect Telegram client.
         """
         if self.client.is_connected():
-            await self.client.disconnect()
+            res = self.client.disconnect()
+            if hasattr(res, "__await__"):
+                await res  # type: ignore
             logger.info("Telegram client disconnected.")
 
     # -----------------------------------------------------------------------

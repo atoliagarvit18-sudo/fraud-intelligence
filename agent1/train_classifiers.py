@@ -13,6 +13,7 @@ import cv2
 import numpy as np
 import pickle
 import json
+from typing import Any, Dict
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report, confusion_matrix, precision_recall_fscore_support
 
@@ -155,7 +156,7 @@ def train_all_denominations():
         with open(model_path, 'wb') as f:
             pickle.dump(clf, f)
 
-        result = {
+        result: Dict[str, Any] = {
             'train_size': len(X_train),
             'test_size': len(X_test),
             'train_genuine': int((y_train == 0).sum()),
@@ -164,19 +165,25 @@ def train_all_denominations():
 
         if len(X_test) > 0 and len(set(y_test)) >= 1:
             y_pred = clf.predict(X_test)
-            precision, recall, f1, _ = precision_recall_fscore_support(
-                y_test, y_pred, average='binary', pos_label=1, zero_division=0, labels=[0, 1])
-            acc = (y_pred == y_test).mean()
+            p_val, r_val, f_val, _ = precision_recall_fscore_support(
+                y_test, y_pred, average='binary', pos_label=1, zero_division='warn'
+            )
+            precision = float(np.mean(p_val))
+            recall = float(np.mean(r_val))
+            f1 = float(np.mean(f_val))
+            acc = float(np.mean(y_pred == y_test))
             result.update({
-                'test_genuine': int((y_test == 0).sum()),
-                'test_fake': int((y_test == 1).sum()),
-                'accuracy': round(float(acc), 3),
-                'fake_precision': round(float(precision), 3),
-                'fake_recall': round(float(recall), 3),
-                'fake_f1': round(float(f1), 3),
+                'test_genuine': int(np.sum(y_test == 0)),
+                'test_fake': int(np.sum(y_test == 1)),
+                'accuracy': round(acc, 3),
+                'fake_precision': round(precision, 3),
+                'fake_recall': round(recall, 3),
+                'fake_f1': round(f1, 3),
             })
-            print(classification_report(y_test, y_pred, labels=[0, 1],
-                                         target_names=['genuine', 'fake'], zero_division=0))
+            print(classification_report(
+                y_test, y_pred, labels=[0, 1],
+                target_names=['genuine', 'fake'], zero_division='warn'
+            ))
         else:
             print("No test data available for this denomination.")
 

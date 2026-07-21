@@ -4,7 +4,7 @@ import { AppShell } from "@/components/soc/AppShell";
 import { GlassCard } from "@/components/soc/GlassCard";
 import { RiskBadge, Chip } from "@/components/soc/Badge";
 import { useAnalysis } from "@/store/analysis";
-import { tierColor, tierFromScore, type AgentKey } from "@/mocks/cases";
+import { tierColor, tierFromScore, cases, type AgentKey } from "@/mocks/cases";
 
 export const Route = createFileRoute("/agent/$id")({
   head: ({ params }) => ({ meta: [{ title: `${params.id[0].toUpperCase() + params.id.slice(1)} Agent — Fraud Intelligence` }] }),
@@ -14,20 +14,21 @@ export const Route = createFileRoute("/agent/$id")({
   ),
 });
 
-const meta: Record<AgentKey, { title: string; agentName: string; icon: typeof AudioLines }> = {
-  speech: { title: "Speech Intelligence Agent", agentName: "Agent 3 — Call & Audio Analysis Engine", icon: AudioLines },
-  text: { title: "OSINT Campaign Intelligence Agent", agentName: "Agent 2 — Reddit, Telegram & Cybercrime Complaints Scraper", icon: FileText },
-  visual: { title: "Visual Intelligence Agent", agentName: "Agent 1 — Currency CV & Document Forensics", icon: ScanEye },
-  network: { title: "Network & Fusion Intelligence Agent", agentName: "Agent 4 — Multi-Agent Correlation Engine", icon: Network },
+const meta: Record<AgentKey, { title: string; agentName: string; icon: typeof AudioLines; role: string; tagline: string }> = {
+  speech: { title: "Speech Intelligence Agent", agentName: "Agent 3", role: "Voice Analysis", icon: AudioLines, tagline: "Call & Audio Analysis Engine" },
+  text: { title: "OSINT Campaign Intelligence Agent", agentName: "Agent 2", role: "Open Source Intel", icon: FileText, tagline: "Reddit, Telegram & Cybercrime Scraper" },
+  visual: { title: "Visual Intelligence Agent", agentName: "Agent 1", role: "Document Forensics", icon: ScanEye, tagline: "Currency CV & Document Forensics" },
+  network: { title: "Network & Fusion Intelligence Agent", agentName: "Agent 4", role: "Graph Analytics", icon: Network, tagline: "Multi-Agent Correlation Engine" },
 };
 
 function AgentPage() {
   const { id } = Route.useParams();
-  const { activeCase } = useAnalysis();
+  const { activeCase: rawActiveCase, history } = useAnalysis();
+  const activeCase = rawActiveCase || history?.[0] || cases[0];
   if (!(id in meta)) throw notFound();
   const key = id as AgentKey;
   const info = meta[key];
-  const data = activeCase.agents[key];
+  const data = activeCase?.agents?.[key] || cases[0].agents[key];
   const tier = tierFromScore(data.score);
   const color = tierColor(tier);
 
@@ -43,26 +44,26 @@ function AgentPage() {
             <div className="grid h-14 w-14 place-items-center rounded-2xl border" style={{ borderColor: color, color, background: `color-mix(in oklab, ${color} 12%, transparent)` }}>
               <info.icon size={24} />
             </div>
-            <div className="min-w-0 flex-1">
-              <div className="text-xs uppercase tracking-widest text-muted-foreground">{info.agentName}</div>
-              <h1 className="text-2xl font-semibold" style={{ fontFamily: "var(--font-display)" }}>{info.title}</h1>
-            </div>
-            <div className="flex flex-col items-end">
-              <div className="flex items-center gap-3">
-                <div>
-                  <div className="text-mono text-3xl font-semibold" style={{ color }}>{data.score}</div>
-                  <div className="text-[10px] uppercase tracking-widest text-muted-foreground text-right">Risk</div>
-                </div>
-                <div className="h-10 w-px bg-white/10" />
-                <div>
-                  <div className="text-mono text-3xl font-semibold">{data.confidence}%</div>
-                  <div className="text-[10px] uppercase tracking-widest text-muted-foreground text-right">Confidence</div>
-                </div>
+            <div className="flex-1">
+              <div className="flex items-center gap-2">
+                <span className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground">{info.role}</span>
+                <RiskBadge tier={tier} />
               </div>
-              <div className="mt-2"><RiskBadge tier={tier} /></div>
+              <h1 className="mt-1 text-2xl font-semibold" style={{ fontFamily: "var(--font-display)" }}>{info.title}</h1>
+              <p className="mt-1 text-xs text-muted-foreground">{info.tagline}</p>
+            </div>
+            <div className="text-right">
+              <div className="text-mono text-4xl font-semibold" style={{ color }}>{data.score}</div>
+              <div className="text-[10px] uppercase tracking-widest text-muted-foreground">risk score</div>
+              <div className="mt-1 text-[11px] text-muted-foreground">Confidence {Math.round(data.confidence * 100)}%</div>
             </div>
           </div>
-          <p className="mt-4 text-sm text-muted-foreground">{data.summary}</p>
+          <div className="mt-6 border-t border-white/10 pt-4 text-xs text-muted-foreground">
+            <span className="font-semibold text-foreground">Status: </span>
+            <span className="uppercase tracking-widest" style={{ color }}>{data.status}</span>
+            <span className="mx-2">·</span>
+            {data.summary}
+          </div>
         </GlassCard>
 
         {key === "speech" && <SpeechDetail />}
@@ -75,8 +76,9 @@ function AgentPage() {
 }
 
 function SpeechDetail() {
-  const { activeCase } = useAnalysis();
-  const d = activeCase.details.speech;
+  const { activeCase: rawActiveCase } = useAnalysis();
+  const activeCase = rawActiveCase || cases[0];
+  const d = activeCase?.details?.speech || cases[0].details.speech;
   return (
     <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
       <GlassCard>
@@ -132,8 +134,9 @@ function SpeechDetail() {
 }
 
 function TextDetail() {
-  const { activeCase } = useAnalysis();
-  const d = activeCase.details.text;
+  const { activeCase: rawActiveCase } = useAnalysis();
+  const activeCase = rawActiveCase || cases[0];
+  const d = activeCase?.details?.text || cases[0].details.text;
   return (
     <div className="grid gap-6 lg:grid-cols-2">
       <GlassCard>
@@ -181,8 +184,9 @@ function TextDetail() {
 }
 
 function VisualDetail() {
-  const { activeCase } = useAnalysis();
-  const d = activeCase.details.visual;
+  const { activeCase: rawActiveCase } = useAnalysis();
+  const activeCase = rawActiveCase || cases[0];
+  const d = activeCase?.details?.visual || cases[0].details.visual;
   return (
     <div className="grid gap-6 lg:grid-cols-2">
       <GlassCard>
@@ -239,8 +243,9 @@ function MetricRow({ label, value, confidence }: { label: string; value: string;
 }
 
 function NetworkDetail() {
-  const { activeCase } = useAnalysis();
-  const d = activeCase.details.network;
+  const { activeCase: rawActiveCase } = useAnalysis();
+  const activeCase = rawActiveCase || cases[0];
+  const d = activeCase?.details?.network || cases[0].details.network;
   const rows = [
     { label: "Phone", value: d.phone, flagged: d.flags.phone },
     { label: "Bank account", value: d.bank, flagged: d.flags.bank },

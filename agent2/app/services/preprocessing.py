@@ -128,7 +128,7 @@ class TextPreprocessor:
         if not text or len(text) < 20:
             return None
         try:
-            from langdetect import detect, LangDetectException
+            from langdetect import detect, LangDetectException  # pyright: ignore[reportMissingImports]
             return detect(text)
         except Exception:
             return None

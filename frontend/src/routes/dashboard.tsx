@@ -26,8 +26,8 @@ export const Route = createFileRoute("/dashboard")({
 const sourceIcon = { audio: AudioLines, image: ImageIcon, text: FileText, phone: Phone, url: Globe } as const;
 
 function Dashboard() {
-  const { activeCase, selectSample } = useAnalysis();
-  const c = activeCase;
+  const { activeCase, selectSample, history } = useAnalysis();
+  const c = activeCase || history?.[0] || cases[0];
   const color = tierColor(c.tier);
 
   const radarData = (Object.entries(c.agents) as [keyof typeof c.agents, typeof c.agents.speech][])
@@ -48,10 +48,10 @@ function Dashboard() {
             <div className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground">Case results</div>
             <h1 className="mt-1 text-2xl font-semibold" style={{ fontFamily: "var(--font-display)" }}>Verdict console</h1>
           </div>
-          <div className="flex items-center gap-1 rounded-full border border-white/10 bg-white/5 p-1 text-xs">
-            {cases.map((cc) => (
+          <div className="flex items-center gap-1 rounded-full border border-white/10 bg-white/5 p-1 text-xs overflow-x-auto max-w-full">
+            {(history.length > 0 ? history.slice(0, 5) : cases).map((cc) => (
               <button key={cc.caseId} onClick={() => selectSample(cc.caseId)}
-                className={`rounded-full px-3 py-1.5 transition ${cc.caseId === c.caseId ? "bg-white/10 text-foreground" : "text-muted-foreground hover:text-foreground"}`}>
+                className={`rounded-full px-3 py-1.5 transition whitespace-nowrap ${cc.caseId === c.caseId ? "bg-white/10 text-foreground font-semibold" : "text-muted-foreground hover:text-foreground"}`}>
                 <span className="text-mono">{cc.caseId.slice(-5)}</span>
                 <span className="ml-2 hidden md:inline">· {cc.verdict}</span>
               </button>

@@ -41,9 +41,13 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   }, [error]);
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
-      <div className="max-w-md text-center">
-        <h1 className="text-xl font-semibold">Something went sideways</h1>
+      <div className="max-w-xl text-center">
+        <h1 className="text-xl font-semibold text-red-400">Something went sideways</h1>
         <p className="mt-2 text-sm text-muted-foreground">Retry, or head back to the dashboard.</p>
+        <div className="mt-4 rounded-lg border border-red-500/20 bg-black/60 p-4 text-left font-mono text-xs text-red-300 max-h-48 overflow-y-auto">
+          <div className="font-bold text-red-400">{error.message || String(error)}</div>
+          {error.stack && <pre className="mt-2 text-[10px] text-muted-foreground whitespace-pre-wrap">{error.stack}</pre>}
+        </div>
         <div className="mt-6 flex justify-center gap-2">
           <button
             onClick={() => { router.invalidate(); reset(); }}

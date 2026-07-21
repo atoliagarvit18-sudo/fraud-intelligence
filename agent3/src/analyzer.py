@@ -133,7 +133,7 @@ def analyze_transcript(transcript):
         scores["KYC Scam"] += 20
         keyword_hits["KYC Scam"].append("kyc + apk combination")
 
-    scam_type = max(scores,key=scores.get)
+    scam_type = max(scores, key=lambda k: scores.get(k, 0))
 
     best_score = scores[scam_type]
     detected_keywords = keyword_hits[scam_type]

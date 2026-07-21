@@ -1,3 +1,4 @@
+# pyright: reportUnsupportedDunderAll=false
 """
 app/services/__init__.py
 
@@ -6,7 +7,7 @@ Lazy exports for intelligence and storage services.
 
 from typing import Any
 
-__all__ = [
+__all__ = [  # pyright: ignore[reportUnsupportedDunderAll]
     "PostClassifier",
     "ClusteringService",
     "EmbeddingService",

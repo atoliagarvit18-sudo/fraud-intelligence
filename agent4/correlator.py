@@ -96,6 +96,24 @@ def correlate(
 
     unified_scam = _unified_scam_type(agent2, agent3)
 
+    is_clean_a1 = not agent1 or agent1.get("verdict") == "genuine" or agent1.get("risk_score", 0) == 0
+    is_clean_a2 = not agent2 or agent2.get("scam_type") in ("None", None) or agent2.get("campaign_score", 0) == 0
+    is_clean_a3 = not agent3 or agent3.get("scam_type") in ("None", None, "Legitimate") or agent3.get("risk_score", 0) == 0
+
+    if unified_scam in ("None", "Unknown", None) and is_clean_a1 and is_clean_a2 and is_clean_a3:
+        return {
+            "scam_type_match":    False,
+            "geo_overlap":        False,
+            "temporal_spike":     False,
+            "infrastructure_link": False,
+            "correlation_score":  0.0,
+            "signals_matched":    0,
+            "signals_total":      4,
+            "correlation_evidence": ["All evaluated sources reported clean or no cyber threat."],
+            "unified_scam_type":  "None",
+            "linked_campaign_id": None,
+        }
+
     return {
         "scam_type_match":    scam_match,
         "geo_overlap":        geo_match,

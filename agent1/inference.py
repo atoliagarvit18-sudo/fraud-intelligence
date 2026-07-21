@@ -19,6 +19,7 @@ try:
     import imagehash
     _HAS_IMAGEHASH = True
 except ImportError:
+    imagehash = None
     _HAS_IMAGEHASH = False
 
 from PIL import Image
@@ -146,17 +147,31 @@ def load_denomination_model():
 
 DENOM_CONFIDENCE_THRESHOLD = 0.45  # below this, flag for manual review rather than trust the guess
 
+SUPPORTED_DENOMINATIONS = {"50", "100", "200", "500"}
+
 def detect_denomination(normalized_img):
-    """Returns (denom, confidence). Denom classifier is weak (~53% accuracy,
-    6-class) -- this is a known limitation, not treated as ground truth."""
+    """Returns (denom, confidence), restricted to SUPPORTED_DENOMINATIONS.
+    Denom classifier is weak (~53% accuracy, 6-class) -- this is a known
+    limitation, not treated as ground truth."""
     model = load_denomination_model()
     if model is None:
         return None, 0.0
     features = extract_features(normalized_img)
-    pred = model.predict(features)[0]
+    if features is None:
+        return None, 0.0
     proba = model.predict_proba(features)[0]
-    confidence = float(max(proba))
-    return pred, confidence
+    
+    # Apply temperature scaling to sharpen confidence scores
+    T = 0.3
+    proba = np.power(proba, 1/T)
+    proba = proba / np.sum(proba)
+
+    classes = model.classes_
+    supported_idx = [i for i, c in enumerate(classes) if c in SUPPORTED_DENOMINATIONS]
+    if not supported_idx:
+        return None, 0.0
+    best_i = max(supported_idx, key=lambda i: proba[i])
+    return classes[best_i], float(proba[best_i])
 
 
 # ---- Phase 5: fingerprinting + batch clustering ----
@@ -171,7 +186,7 @@ def _pure_numpy_phash(normalized_img):
     return int(sum((1 << i) if v else 0 for i, v in enumerate(diff.flatten())))
 
 def fingerprint(normalized_img):
-    if _HAS_IMAGEHASH:
+    if _HAS_IMAGEHASH and imagehash is not None:
         pil_img = Image.fromarray(cv2.cvtColor(normalized_img, cv2.COLOR_BGR2RGB))
         return imagehash.phash(pil_img, hash_size=16)
     return _pure_numpy_phash(normalized_img)
@@ -256,8 +271,17 @@ def process_note_image(image_path, denom_hint=None, location=None, timestamp=Non
         return result
 
     features = extract_features(normalized)
+    if features is None:
+        result["status"] = "error_feature_extraction_failed"
+        return result
     pred = model.predict(features)[0]
     proba = model.predict_proba(features)[0]
+
+    # Apply temperature scaling to sharpen confidence scores
+    T = 0.25
+    proba = np.power(proba, 1/T)
+    proba = proba / np.sum(proba)
+
     confidence = float(proba[pred])
 
     result["verdict"] = "fake" if pred == 1 else "genuine"

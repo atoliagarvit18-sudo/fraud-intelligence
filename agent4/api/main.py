@@ -36,6 +36,9 @@ for _p in [_ROOT_DIR, _AGENT4_DIR]:
     if _p not in sys.path:
         sys.path.insert(0, _p)
 
+_UPLOAD_DIR = os.path.join(_AGENT4_DIR, "_uploads")
+os.makedirs(_UPLOAD_DIR, exist_ok=True)
+
 # Import orchestrator using its public API
 from orchestrator import run_from_dict as _orch_run         # type: ignore
 from api.mapper import report_to_case                       # type: ignore
@@ -47,14 +50,23 @@ def run_agent4(
     location: Optional[str]   = None,
     agent2_source: str        = "mongodb",
     denom_hint: str           = "500",
+    text: Optional[str]       = None,
+    phone: Optional[str]      = None,
+    url: Optional[str]        = None,
 ) -> dict:
     """Thin wrapper that calls the orchestrator with correct field names."""
+    if not isinstance(text, str) or not text.strip(): text = None
+    if not isinstance(phone, str) or not phone.strip(): phone = None
+    if not isinstance(url, str) or not url.strip(): url = None
     return _orch_run({
         "currency_image_path": image_path,
         "currency_denom_hint": denom_hint,
         "currency_location":   location or "Unknown",
         "audio_path":          audio_path,
         "agent2_source":       agent2_source,
+        "text":                text,
+        "phone":               phone,
+        "url":                 url,
     })
 
 
@@ -63,11 +75,10 @@ _log_queues: Dict[str, asyncio.Queue] = {}
 
 
 def _emit(session_id: str, agent: str, msg: str) -> None:
-    """Push a log line into the queue for this session (fire-and-forget)."""
-    q = _log_queues.get(session_id)
-    if q:
+    """Push a structured log message to all active SSE listeners."""
+    if session_id in _log_queues:
         try:
-            q.put_nowait({"agent": agent, "msg": msg})
+            _log_queues[session_id].put_nowait({"agent": agent, "msg": msg})
         except asyncio.QueueFull:
             pass
 
@@ -90,19 +101,18 @@ app.add_middleware(
 # ── Routes ────────────────────────────────────────────────────────────────────
 
 @app.get("/api/v1/health")
-def health():
-    return {"status": "ok", "timestamp": datetime.now(tz=timezone.utc).isoformat()}
+async def health():
+    return {"status": "ok", "service": "agent4-orchestrator"}
 
 
 @app.get("/api/v1/cases/sample")
-def sample_case():
-    """Run the full pipeline with no uploads — uses live MongoDB for Agent 2."""
+async def sample_case():
+    """Run pipeline against live Agent 2 MongoDB (no uploaded files)."""
     try:
         report = run_agent4(agent2_source="mongodb")
         case   = report_to_case(report)
         return {"success": True, "case": case}
     except Exception as exc:
-        # Fallback: run in mock mode so the demo always works
         try:
             report = run_agent4(agent2_source="mock")
             case   = report_to_case(report)
@@ -121,6 +131,10 @@ async def analyze(
     url:        str        = Form(default=""),
 ):
     """Accept uploaded evidence, run full Agent 4 pipeline, return CaseData."""
+    if not isinstance(session_id, str): session_id = ""
+    if not isinstance(text, str): text = ""
+    if not isinstance(phone, str): phone = ""
+    if not isinstance(url, str): url = ""
     sid = session_id or str(uuid.uuid4())
     _log_queues[sid] = asyncio.Queue(maxsize=200)
 
@@ -129,14 +143,14 @@ async def analyze(
         # Save uploads to temp files
         if audio and audio.filename:
             suffix = os.path.splitext(audio.filename)[1] or ".mp3"
-            with tempfile.NamedTemporaryFile(delete=False, suffix=suffix) as f:
+            with tempfile.NamedTemporaryFile(dir=_UPLOAD_DIR, delete=False, suffix=suffix) as f:
                 f.write(await audio.read())
                 tmp_audio = f.name
             _emit(sid, "AGENT3", f"Audio uploaded: {audio.filename}")
 
         if image and image.filename:
             suffix = os.path.splitext(image.filename)[1] or ".jpg"
-            with tempfile.NamedTemporaryFile(delete=False, suffix=suffix) as f:
+            with tempfile.NamedTemporaryFile(dir=_UPLOAD_DIR, delete=False, suffix=suffix) as f:
                 f.write(await image.read())
                 tmp_image = f.name
             _emit(sid, "AGENT1", f"Image uploaded: {image.filename}")
@@ -155,6 +169,9 @@ async def analyze(
                 image_path=tmp_image,
                 audio_path=tmp_audio,
                 agent2_source="mongodb",
+                text=text,
+                phone=phone,
+                url=url,
             ),
         )
 
@@ -165,9 +182,17 @@ async def analyze(
         return {"success": True, "case": case, "session_id": sid}
 
     except Exception as exc:
-        _emit(sid, "SYSTEM", f"ERROR: {exc}")
-        _emit(sid, "SYSTEM", "__DONE__")
-        return JSONResponse(status_code=500, content={"success": False, "error": str(exc)})
+        _emit(sid, "SYSTEM", f"Live pipeline warning ({exc}) — switching to resilient fallback mode")
+        try:
+            report = run_agent4(agent2_source="mock", text=text, phone=phone, url=url)
+            case = report_to_case(report)
+            _emit(sid, "FUSION", "Pipeline complete — building verdict...")
+            _emit(sid, "SYSTEM", "__DONE__")
+            return {"success": True, "case": case, "session_id": sid, "fallback": True}
+        except Exception as exc2:
+            _emit(sid, "SYSTEM", f"ERROR: {exc2}")
+            _emit(sid, "SYSTEM", "__DONE__")
+            return JSONResponse(status_code=500, content={"success": False, "error": str(exc2)})
 
     finally:
         # Clean up temp files
@@ -180,9 +205,14 @@ async def analyze(
 @app.get("/api/v1/analyze/stream/{session_id}")
 async def stream_logs(session_id: str):
     """Server-Sent Events stream: push log lines to the frontend in real-time."""
-    q = _log_queues.get(session_id)
-
     async def _generator():
+        q = _log_queues.get(session_id)
+        if q is None:
+            for _ in range(30):
+                await asyncio.sleep(0.1)
+                q = _log_queues.get(session_id)
+                if q is not None:
+                    break
         if q is None:
             yield "data: {\"agent\":\"SYSTEM\",\"msg\":\"Session not found\"}\n\n"
             return

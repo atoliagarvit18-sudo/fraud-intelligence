@@ -1,0 +1,239 @@
+[
+  {
+    "image_path": "C:\\Users\\Garvit\\OneDrive\\Desktop\\ET Hackathon\\fraud-campaign-intelligence\\agent1\\sample_data\\100_fake_0.jpg",
+    "timestamp": "2026-07-20T14:02:46.497318",
+    "location": "Jodhpur Branch A",
+    "status": "ok",
+    "denomination": "100",
+    "verdict": "fake",
+    "confidence": 0.994,
+    "batch_id": "batch_001",
+    "is_new_batch": true,
+    "denomination_auto_detected": false,
+    "location_coords": [
+      26.2389,
+      73.0243
+    ]
+  },
+  {
+    "image_path": "C:\\Users\\Garvit\\OneDrive\\Desktop\\ET Hackathon\\fraud-campaign-intelligence\\agent1\\sample_data\\100_fake_1.jpg",
+    "timestamp": "2026-07-20T14:02:48.656060",
+    "location": "Jaipur Branch A",
+    "status": "ok",
+    "denomination": "100",
+    "verdict": "fake",
+    "confidence": 0.984,
+    "batch_id": "batch_002",
+    "is_new_batch": true,
+    "denomination_auto_detected": false,
+    "location_coords": [
+      26.9124,
+      75.7873
+    ]
+  },
+  {
+    "image_path": "C:\\Users\\Garvit\\OneDrive\\Desktop\\ET Hackathon\\fraud-campaign-intelligence\\agent1\\sample_data\\100_genuine_0.jpg",
+    "timestamp": "2026-07-20T14:02:48.705459",
+    "location": "Ajmer Branch A",
+    "status": "ok",
+    "denomination": "100",
+    "verdict": "genuine",
+    "confidence": 0.865,
+    "batch_id": null,
+    "is_new_batch": null,
+    "denomination_auto_detected": false,
+    "location_coords": [
+      26.4499,
+      74.6399
+    ]
+  },
+  {
+    "image_path": "C:\\Users\\Garvit\\OneDrive\\Desktop\\ET Hackathon\\fraud-campaign-intelligence\\agent1\\sample_data\\100_genuine_1.jpg",
+    "timestamp": "2026-07-20T14:02:48.752830",
+    "location": "Jodhpur Branch A",
+    "status": "ok",
+    "denomination": "100",
+    "verdict": "genuine",
+    "confidence": 0.94,
+    "batch_id": null,
+    "is_new_batch": null,
+    "denomination_auto_detected": false,
+    "location_coords": [
+      26.2389,
+      73.0243
+    ]
+  },
+  {
+    "image_path": "C:\\Users\\Garvit\\OneDrive\\Desktop\\ET Hackathon\\fraud-campaign-intelligence\\agent1\\sample_data\\10_fake_0.jpg",
+    "timestamp": "2026-07-20T14:02:48.803384",
+    "location": "Jaipur Branch B",
+    "status": "error_no_note_detected",
+    "denomination": "10",
+    "verdict": null,
+    "confidence": null,
+    "batch_id": null,
+    "is_new_batch": null,
+    "location_coords": [
+      26.885,
+      75.82
+    ]
+  },
+  {
+    "image_path": "C:\\Users\\Garvit\\OneDrive\\Desktop\\ET Hackathon\\fraud-campaign-intelligence\\agent1\\sample_data\\10_fake_1.jpg",
+    "timestamp": "2026-07-20T14:02:48.817906",
+    "location": "Jaipur Branch B",
+    "status": "ok",
+    "denomination": "10",
+    "verdict": "fake",
+    "confidence": 0.869,
+    "batch_id": "batch_003",
+    "is_new_batch": true,
+    "denomination_auto_detected": false,
+    "location_coords": [
+      26.885,
+      75.82
+    ]
+  },
+  {
+    "image_path": "C:\\Users\\Garvit\\OneDrive\\Desktop\\ET Hackathon\\fraud-campaign-intelligence\\agent1\\sample_data\\200_fake_0.jpg",
+    "timestamp": "2026-07-20T14:02:48.880186",
+    "location": "Jodhpur Branch A",
+    "status": "ok",
+    "denomination": "200",
+    "verdict": "fake",
+    "confidence": 0.886,
+    "batch_id": "batch_004",
+    "is_new_batch": true,
+    "denomination_auto_detected": false,
+    "location_coords": [
+      26.2389,
+      73.0243
+    ]
+  },
+  {
+    "image_path": "C:\\Users\\Garvit\\OneDrive\\Desktop\\ET Hackathon\\fraud-campaign-intelligence\\agent1\\sample_data\\200_fake_1.jpg",
+    "timestamp": "2026-07-20T14:02:48.977198",
+    "location": "Jodhpur Branch A",
+    "status": "ok",
+    "denomination": "200",
+    "verdict": "fake",
+    "confidence": 0.99,
+    "batch_id": "batch_005",
+    "is_new_batch": true,
+    "denomination_auto_detected": false,
+    "location_coords": [
+      26.2389,
+      73.0243
+    ]
+  },
+  {
+    "image_path": "C:\\Users\\Garvit\\OneDrive\\Desktop\\ET Hackathon\\fraud-campaign-intelligence\\agent1\\sample_data\\20_fake_0.jpg",
+    "timestamp": "2026-07-20T14:02:49.023081",
+    "location": "Jodhpur Branch A",
+    "status": "error_no_note_detected",
+    "denomination": "20",
+    "verdict": null,
+    "confidence": null,
+    "batch_id": null,
+    "is_new_batch": null,
+    "location_coords": [
+      26.2389,
+      73.0243
+    ]
+  },
+  {
+    "image_path": "C:\\Users\\Garvit\\OneDrive\\Desktop\\ET Hackathon\\fraud-campaign-intelligence\\agent1\\sample_data\\20_fake_1.jpg",
+    "timestamp": "2026-07-20T14:02:49.038082",
+    "location": "Jaipur Branch A",
+    "status": "error_no_note_detected",
+    "denomination": "20",
+    "verdict": null,
+    "confidence": null,
+    "batch_id": null,
+    "is_new_batch": null,
+    "location_coords": [
+      26.9124,
+      75.7873
+    ]
+  },
+  {
+    "image_path": "C:\\Users\\Garvit\\OneDrive\\Desktop\\ET Hackathon\\fraud-campaign-intelligence\\agent1\\sample_data\\500_fake_0.jpg",
+    "timestamp": "2026-07-20T14:02:49.047081",
+    "location": "Jodhpur Branch A",
+    "status": "ok",
+    "denomination": "500",
+    "verdict": "fake",
+    "confidence": 0.856,
+    "batch_id": "batch_006",
+    "is_new_batch": true,
+    "denomination_auto_detected": false,
+    "location_coords": [
+      26.2389,
+      73.0243
+    ]
+  },
+  {
+    "image_path": "C:\\Users\\Garvit\\OneDrive\\Desktop\\ET Hackathon\\fraud-campaign-intelligence\\agent1\\sample_data\\500_fake_1.jpg",
+    "timestamp": "2026-07-20T14:02:49.114122",
+    "location": "Jaipur Branch A",
+    "status": "ok",
+    "denomination": "500",
+    "verdict": "fake",
+    "confidence": 0.971,
+    "batch_id": "batch_007",
+    "is_new_batch": true,
+    "denomination_auto_detected": false,
+    "location_coords": [
+      26.9124,
+      75.7873
+    ]
+  },
+  {
+    "image_path": "C:\\Users\\Garvit\\OneDrive\\Desktop\\ET Hackathon\\fraud-campaign-intelligence\\agent1\\sample_data\\500_genuine_0.jpg",
+    "timestamp": "2026-07-20T14:02:49.158688",
+    "location": "Ajmer Branch A",
+    "status": "ok",
+    "denomination": "500",
+    "verdict": "genuine",
+    "confidence": 0.607,
+    "batch_id": null,
+    "is_new_batch": null,
+    "denomination_auto_detected": false,
+    "location_coords": [
+      26.4499,
+      74.6399
+    ]
+  },
+  {
+    "image_path": "C:\\Users\\Garvit\\OneDrive\\Desktop\\ET Hackathon\\fraud-campaign-intelligence\\agent1\\sample_data\\500_genuine_1.jpg",
+    "timestamp": "2026-07-20T14:02:49.203732",
+    "location": "Jaipur Branch B",
+    "status": "ok",
+    "denomination": "500",
+    "verdict": "genuine",
+    "confidence": 0.681,
+    "batch_id": null,
+    "is_new_batch": null,
+    "denomination_auto_detected": false,
+    "location_coords": [
+      26.885,
+      75.82
+    ]
+  },
+  {
+    "image_path": "C:\\Users\\Garvit\\OneDrive\\Desktop\\ET Hackathon\\fraud-campaign-intelligence\\agent1\\sample_data\\50_fake_0.jpg",
+    "timestamp": "2026-07-20T14:02:49.245508",
+    "location": "Ajmer Branch A",
+    "status": "ok",
+    "denomination": "50",
+    "verdict": "fake",
+    "confidence": 0.806,
+    "batch_id": "batch_008",
+    "is_new_batch": true,
+    "denomination_auto_detected": false,
+    "location_coords": [
+      26.4499,
+      74.6399
+    ]
+  }
+]

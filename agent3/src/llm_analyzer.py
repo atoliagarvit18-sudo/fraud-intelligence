@@ -119,13 +119,8 @@ def analyze_with_llm(transcript):
         ]
     )
 
-    text = (
-        response
-        .choices[0]
-        .message
-        .content
-        .strip()
-    )
+    content = response.choices[0].message.content
+    text = (content or "").strip()
 
     if text.startswith("```"):
         lines = text.splitlines()

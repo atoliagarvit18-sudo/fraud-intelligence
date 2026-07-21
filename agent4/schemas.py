@@ -195,7 +195,7 @@ class OrchestratorInput(BaseModel):
         description="Path to scam call audio file for Agent 3 analysis"
     )
 
-    # Agent 2 source mode
+    # Agent 2 source mode & manual query inputs
     agent2_source: str = Field(
         default="mongodb",
         description="'mongodb' (default/live) | 'json' | 'mock'"
@@ -203,6 +203,18 @@ class OrchestratorInput(BaseModel):
     agent2_json_path: Optional[str] = Field(
         default=None,
         description="Path to Agent 2 events JSON file (for 'json' mode)"
+    )
+    text: Optional[str] = Field(
+        default=None,
+        description="Raw text evidence or OSINT query message"
+    )
+    phone: Optional[str] = Field(
+        default=None,
+        description="Phone number evidence"
+    )
+    url: Optional[str] = Field(
+        default=None,
+        description="Website URL evidence"
     )
 
     # Pre-computed agent outputs (for offline/demo mode)

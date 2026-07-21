@@ -153,6 +153,9 @@ def run(inputs: OrchestratorInput) -> Dict[str, Any]:
             "evidence_engine":        "SHA-256 legal evidence packager",
             "models_used":            _models_used(a1, a2, a3),
         },
+        "text":  inputs.text,
+        "phone": inputs.phone,
+        "url":   inputs.url,
     }
 
     return report
@@ -200,9 +203,24 @@ def _get_agent2(inputs: OrchestratorInput) -> Optional[Dict[str, Any]]:
         result.setdefault("available", True)
         return result
 
+    if (inputs.currency_image_path or inputs.audio_path) and not (inputs.text or inputs.phone or inputs.url):
+        return {
+            "available": False,
+            "severity": "low",
+            "scam_type": "None",
+            "campaign_score": 0.0,
+            "weighted_confidence": 0.0,
+            "post_count": 0,
+            "summary": "No text, phone, or URL provided for OSINT campaign cross-referencing.",
+            "_source": "not_requested",
+            "_mock": False,
+        }
+
     return agent2_adapter.run(
         source=inputs.agent2_source,
         json_path=inputs.agent2_json_path,
+        query_text=inputs.text,
+        phone=inputs.phone,
     )
 
 
@@ -215,8 +233,17 @@ def _get_agent3(inputs: OrchestratorInput) -> Optional[Dict[str, Any]]:
     if inputs.audio_path:
         return agent3_adapter.run(audio_path=inputs.audio_path)
 
-    # Fall back to mock for demo mode
-    return agent3_adapter.mock_result()
+    return {
+        "available": False,
+        "scam_type": "None",
+        "confidence": 0.0,
+        "risk_score": 0,
+        "summary": "No audio file uploaded for speech/call analysis.",
+        "transcript": [],
+        "psychological_tactics": [],
+        "error": "No audio provided",
+        "_mock": False,
+    }
 
 
 def _models_used(a1, a2, a3) -> list:

@@ -51,8 +51,10 @@ def report_to_case(report: Dict[str, Any]) -> Dict[str, Any]:
         or synthesis.get("verdict")
         or "Unknown"
     )
-    if verdict == "Unknown" and overall > 0:
+    if (verdict == "Unknown" or verdict == "None") and overall > 0:
         verdict = "Suspicious Activity Detected"
+    elif overall == 0 or verdict in ("Unknown", "None", "No Cyber Threat Detected"):
+        verdict = "No Cyber Threat Detected"
 
     # ── Per-agent raw data ───────────────────────────────────────────────────
     a1  = agents_r.get("agent1") or report.get("agent1_currency") or {}
@@ -67,7 +69,7 @@ def report_to_case(report: Dict[str, Any]) -> Dict[str, Any]:
     elif a1.get("verdict") == "fake":
         a1_score = int(float(a1.get("confidence", 0.87)) * 100)
     elif a1.get("verdict") == "genuine":
-        a1_score = int((1.0 - float(a1.get("confidence", 0.85))) * 100)
+        a1_score = 0
 
     a1_conf = int(float(a1.get("confidence", 0.0)) * 100) if a1.get("confidence") is not None else 0
     a1_summary = str(a1.get("summary") or a1.get("reasoning") or (
@@ -116,12 +118,14 @@ def report_to_case(report: Dict[str, Any]) -> Dict[str, Any]:
     ag4_conf = int(float(ag4.get("confidence", 0.92)) * 100) if (ag4.get("signals_matched") or overall > 0) else 0
     ag4_summary = str(ag4.get("summary") or ag4.get("content_summary") or (
         f"Cross-agent correlation: {ag4.get('signals_matched', 2)} signals matched. {ag4.get('correlation_evidence', [''])[0][:80]}" if ag4.get("signals_matched")
-        else "Pending cross-agent fusion analysis"
+        else ("All agents evaluated clean. No cross-agent threat correlation found." if overall == 0 else "Pending cross-agent fusion analysis")
     ))
 
     if overall == 0:
         overall = max(a1_score, a2_score, a3_score, ag4_score)
         tier = _score_to_tier(overall)
+        if overall == 0:
+            verdict = "No Cyber Threat Detected"
 
     # ── Per-agent cards (must include status + summary) ──────────────────────
     agents = {
@@ -133,10 +137,10 @@ def report_to_case(report: Dict[str, Any]) -> Dict[str, Any]:
 
     # ── Evidence sources ─────────────────────────────────────────────────────
     sources_list: List[str] = []
-    if a3_score > 0 or a3.get("audio_file") or a3.get("transcript"): sources_list.append("audio")
-    if a1_score > 0 or a1.get("image_path") or a1.get("verdict"):    sources_list.append("image")
-    if a2_score > 0 or a2.get("post_count", 0) > 0:                  sources_list.append("text")
-    if not sources_list:                                             sources_list = ["text"]
+    if a3_score > 0 or a3.get("audio_file") or a3.get("transcript") or a3.get("scam_type") not in (None, "None"): sources_list.append("audio")
+    if a1_score > 0 or a1.get("image_path") or a1.get("verdict") in ("fake", "genuine"):                            sources_list.append("image")
+    if a2_score > 0 or a2.get("post_count", 0) > 0 or (a2.get("summary") and "No text" not in a2.get("summary", "")): sources_list.append("text")
+    if not sources_list:                                                                                          sources_list = ["text"]
 
     # ── Recommendations ──────────────────────────────────────────────────────
     recs_raw = report.get("recommended_actions") or synthesis.get("recommendations") or synthesis.get("recommended_actions") or []
@@ -275,16 +279,23 @@ def report_to_case(report: Dict[str, Any]) -> Dict[str, Any]:
     raw_fake_id = a1.get("fake_id_analysis", {})
     if isinstance(raw_fake_id, dict) and raw_fake_id:
         raw_regions = raw_fake_id.get("regions", raw_fake_id.get("anomaly_regions", []))
-        if isinstance(raw_regions, list):
-            regions = [
-                {
-                    "x": float(r.get("x", r[0] if isinstance(r, (list, tuple)) else 10)),
-                    "y": float(r.get("y", r[1] if isinstance(r, (list, tuple)) else 10)),
-                    "w": float(r.get("w", r[2] if isinstance(r, (list, tuple)) else 30)),
-                    "h": float(r.get("h", r[3] if isinstance(r, (list, tuple)) else 20)),
-                }
-                for r in raw_regions[:4] if isinstance(r, (dict, list, tuple))
-            ]
+        if isinstance(raw_regions, (list, tuple)):
+            regions = []
+            for r in raw_regions[:4]:
+                if isinstance(r, dict):
+                    regions.append({
+                        "x": float(r.get("x", 10)),
+                        "y": float(r.get("y", 10)),
+                        "w": float(r.get("w", 30)),
+                        "h": float(r.get("h", 20)),
+                    })
+                elif isinstance(r, (list, tuple)) and len(r) >= 4:
+                    regions.append({
+                        "x": float(r[0]),
+                        "y": float(r[1]),
+                        "w": float(r[2]),
+                        "h": float(r[3]),
+                    })
         else:
             regions = []
         fake_id = {

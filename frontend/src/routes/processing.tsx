@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { AudioLines, FileText, ScanEye, Network, Check, Loader2, Zap, ArrowRight } from "lucide-react";
 import { AppShell } from "@/components/soc/AppShell";
 import { GlassCard } from "@/components/soc/GlassCard";
-import { tierColor, tierFromScore } from "@/mocks/cases";
+import { tierColor, tierFromScore, cases } from "@/mocks/cases";
 import { useAnalysis } from "@/store/analysis";
 
 export const Route = createFileRoute("/processing")({
@@ -37,7 +37,8 @@ const BOOT_LOGS = [
 
 function Processing() {
   const nav = useNavigate();
-  const { activeCase, isLoading, loadingSessionId, selectSample } = useAnalysis();
+  const { activeCase: rawActiveCase, isLoading, loadingSessionId, selectSample } = useAnalysis();
+  const activeCase = rawActiveCase || cases[0];
 
   const [stage, setStage]           = useState(-1);
   const [logs, setLogs]             = useState<string[]>([]);
@@ -59,8 +60,6 @@ function Processing() {
       return () => clearTimeout(t);
     }
   }, []);
-
-  useEffect(() => { if (activeCase?.caseId) selectSample(activeCase.caseId); }, []);
 
   useEffect(() => {
     let cancelled = false;
@@ -87,9 +86,14 @@ function Processing() {
 
   useEffect(() => {
     const int = setInterval(() => {
-      if (bootLogIdx.current < BOOT_LOGS.length) {
-        setLogs((prev) => [...prev, BOOT_LOGS[bootLogIdx.current++]]);
-        if (logRef.current) logRef.current.scrollTop = logRef.current.scrollHeight;
+      const idx = bootLogIdx.current;
+      if (idx < BOOT_LOGS.length) {
+        bootLogIdx.current = idx + 1;
+        const line = BOOT_LOGS[idx];
+        if (line) {
+          setLogs((prev) => [...prev, line]);
+          if (logRef.current) logRef.current.scrollTop = logRef.current.scrollHeight;
+        }
       } else { clearInterval(int); }
     }, 520);
     return () => clearInterval(int);
@@ -101,11 +105,14 @@ function Processing() {
     const es = new EventSource(`/api/v1/analyze/stream/${sid}`);
     es.onmessage = (e) => {
       try {
-        const d = JSON.parse(e.data) as { agent: string; msg: string };
+        const d = JSON.parse(e.data);
+        if (!d || typeof d !== "object") return;
         if (d.msg === "__DONE__") { es.close(); return; }
-        const line = `[${d.agent}] ${d.msg}`;
-        setLogs((prev) => [...prev.slice(-60), line]);
-        if (logRef.current) logRef.current.scrollTop = logRef.current.scrollHeight;
+        const line = `[${d.agent || "SYSTEM"}] ${d.msg || ""}`;
+        if (line) {
+          setLogs((prev) => [...prev.slice(-60), line]);
+          if (logRef.current) logRef.current.scrollTop = logRef.current.scrollHeight;
+        }
       } catch { /* ignore */ }
     };
     es.onerror = () => es.close();
@@ -114,12 +121,12 @@ function Processing() {
 
   useEffect(() => {
     if (!isLoading) {
-      const c = useAnalysis.getState().activeCase;
+      const c = useAnalysis.getState().activeCase || cases[0];
       setLiveScores({
-        speech:  c.agents?.speech?.score  ?? 0,
-        visual:  c.agents?.visual?.score  ?? 0,
-        text:    c.agents?.text?.score    ?? 0,
-        network: c.agents?.network?.score ?? 0,
+        speech:  c?.agents?.speech?.score  ?? 0,
+        visual:  c?.agents?.visual?.score  ?? 0,
+        text:    c?.agents?.text?.score    ?? 0,
+        network: c?.agents?.network?.score ?? 0,
       });
     }
   }, [isLoading]);
@@ -139,7 +146,7 @@ function Processing() {
           <div className="grid gap-4 md:grid-cols-2">
             {STAGES.map((sg, i) => {
               const status = stage > i ? "complete" : stage === i ? "scanning" : "idle";
-              const score  = liveScores[sg.key] ?? (status === "complete" ? (activeCase.agents?.[sg.key]?.score ?? 0) : 0);
+              const score  = liveScores[sg.key] ?? (status === "complete" ? (activeCase?.agents?.[sg.key]?.score ?? 0) : 0);
               const tier   = tierFromScore(score);
               const color  = tierColor(tier);
               return (
@@ -231,7 +238,7 @@ function Processing() {
             </span>
           </div>
           <div ref={logRef} className="text-mono h-96 overflow-y-auto rounded-lg border border-white/10 bg-black/40 p-3 text-[11px] leading-relaxed">
-            {logs.map((l, i) => {
+            {logs.filter(l => l != null && typeof l === "string").map((l, i) => {
               const agentKey = l.match(/^\[([A-Z0-9]+)\]/)?.[1] ?? "SYSTEM";
               const color =
                 agentKey === "AGENT3" ? "var(--neon-cyan)"
@@ -239,10 +246,11 @@ function Processing() {
                 : agentKey === "AGENT1" ? "var(--neon-violet)"
                 : agentKey === "FUSION" ? "var(--risk-medium)"
                 : "var(--muted-foreground)";
+              const parts = l.split(" ");
               return (
                 <div key={i} className="whitespace-pre-wrap">
-                  <span style={{ color }}>{l.split(" ")[0]}</span>{" "}
-                  <span className="text-foreground/80">{l.split(" ").slice(1).join(" ")}</span>
+                  <span style={{ color }}>{parts[0]}</span>{" "}
+                  <span className="text-foreground/80">{parts.slice(1).join(" ")}</span>
                 </div>
               );
             })}

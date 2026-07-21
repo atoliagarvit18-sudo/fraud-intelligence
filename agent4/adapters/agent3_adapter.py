@@ -67,13 +67,18 @@ def run(
         dict matching Agent3Result schema — never raises.
     """
     # --- Step 1: Try live pipeline if audio exists ---
-    if audio_path and os.path.exists(audio_path):
-        result = _run_live(audio_path)
-        if result.get("available"):
-            return result
-        # Live failed — report why and try next option
-        print(f"  [!] Agent 3 live pipeline failed: {result.get('error')}")
-        print(f"  [!] Attempting precomputed fallback...")
+    if audio_path:
+        if not os.path.exists(audio_path):
+            resolved = os.path.normpath(os.path.join(_AGENT4_DIR, "..", audio_path))
+            if os.path.exists(resolved):
+                audio_path = resolved
+        if os.path.exists(audio_path):
+            result = _run_live(audio_path)
+            if result.get("available"):
+                return result
+            # Live failed — report why and try next option
+            print(f"  [!] Agent 3 live pipeline failed: {result.get('error')}")
+            print(f"  [!] Attempting precomputed fallback...")
 
     # --- Step 2: Try precomputed transcript.json ---
     precomputed_path = precomputed_json or _find_precomputed()

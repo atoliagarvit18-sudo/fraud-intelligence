@@ -32,6 +32,7 @@ try:
     import networkx as nx
     _NX_AVAILABLE = True
 except ImportError:
+    nx = None
     _NX_AVAILABLE = False
 
 
@@ -216,7 +217,7 @@ def _build_graph(signals: Dict, op_min: int, op_max: int):
     Build a NetworkX directed graph representing the criminal network.
     Returns (graph, key_node_name).
     """
-    if not _NX_AVAILABLE:
+    if not _NX_AVAILABLE or nx is None:
         return _DummyGraph(), "ScamOperation"
 
     G = nx.DiGraph()
@@ -259,7 +260,7 @@ def _build_graph(signals: Dict, op_min: int, op_max: int):
     key_node = "ScamOperation"
     if G.number_of_nodes() > 1:
         degrees = dict(G.degree())
-        key_node = max(degrees, key=degrees.get)
+        key_node = max(degrees, key=lambda k: degrees.get(k, 0))
 
     return G, key_node
 
