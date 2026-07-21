@@ -21,6 +21,12 @@ import sys
 from datetime import datetime, timezone
 from typing import Any, Dict, Optional
 
+import sys
+
+print("=" * 60)
+print("Python executable:", sys.executable)
+print("Python version:", sys.version)
+print("=" * 60)
 # ---------------------------------------------------------------------------
 # Path setup — agent3/src must be on sys.path for its module imports to work
 # ---------------------------------------------------------------------------
@@ -48,6 +54,7 @@ if os.path.exists(_AGENT3_ENV):
 
 def run(
     audio_path: Optional[str] = None,
+    transcript: Optional[str] = None,
     precomputed_json: Optional[str] = None,
 ) -> Dict[str, Any]:
     """
@@ -66,6 +73,12 @@ def run(
     Returns:
         dict matching Agent3Result schema — never raises.
     """
+    if transcript and transcript.strip():
+        print("  [LIVE] Using provided transcript")
+        result = _run_from_transcript(transcript)
+        if result.get("available"):
+            return result
+
     # --- Step 1: Try live pipeline if audio exists ---
     if audio_path:
         if not os.path.exists(audio_path):
@@ -73,7 +86,7 @@ def run(
             if os.path.exists(resolved):
                 audio_path = resolved
         if os.path.exists(audio_path):
-            result = _run_live(audio_path)
+            result = _run_live(audio_path, transcript)
             if result.get("available"):
                 return result
             # Live failed — report why and try next option
@@ -96,8 +109,40 @@ def run(
     print(f"  [!] Agent 3 using mock fallback ({reason})")
     return mock_result()
 
+def _run_from_transcript(transcript):
 
-def _run_live(audio_path: str) -> Dict[str, Any]:
+    from analyzer import analyze_transcript
+    from semantic_analyzer import semantic_analysis
+    from llm_analyzer import analyze_with_llm
+    from decision_engine import make_final_decision
+
+
+    keyword_result = analyze_transcript(transcript)
+
+    semantic_result = semantic_analysis(transcript)
+
+    llm_result = analyze_with_llm(transcript)
+
+
+    overall = make_final_decision(
+        keyword_result,
+        semantic_result,
+        llm_result
+    )
+
+
+    return _normalise_live(
+        "provided_transcript",
+        transcript,
+        "provided",
+        keyword_result,
+        semantic_result,
+        llm_result,
+        {},
+        overall
+    )
+
+def _run_live(audio_path: str, transcript: Optional[str] = None) -> Dict[str, Any]:
     """Import Agent 3 modules and run the full analysis pipeline."""
     # Agent 3 transcriber.py loads Whisper at module import time
     # so we must handle that import carefully
@@ -118,11 +163,17 @@ def _run_live(audio_path: str) -> Dict[str, Any]:
         return {"available": False, "error": f"Agent 3 module import failed: {e}"}
 
     try:
-        # Step 1: Transcribe
-        transcription  = transcribe_audio(audio_path)
-        transcript     = transcription["text"]
-        language       = transcription.get("language", "unknown")
+        # Step 1
+        # If frontend already supplied transcript,
+        # don't run Whisper again.
 
+        if transcript and transcript.strip():
+            language = "unknown"
+        else:
+            transcription = transcribe_audio(audio_path)
+            transcript = transcription["text"]
+            language = transcription.get("language", "unknown")
+            
         # Step 2: Three-layer analysis
         keyword_result  = analyze_transcript(transcript)
         semantic_result = semantic_analysis(transcript)

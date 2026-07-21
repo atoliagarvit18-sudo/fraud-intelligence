@@ -236,7 +236,7 @@ def _run_agent3(audio_path: str) -> dict:
     _step("Running Librosa voice analysis (energy, ZCR, duration)...")
     _step("Computing 3-analyzer ensemble decision (majority vote)...")
 
-    result = agent3_adapter.run(audio_path=audio_path)
+    result = agent3_adapter.run(audio_path=audio_path, transcript = transcript)
 
     badge = _source_badge(result)
 

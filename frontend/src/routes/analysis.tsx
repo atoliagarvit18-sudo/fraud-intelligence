@@ -21,6 +21,7 @@ function Analysis() {
   const { analyzeEvidence, isLoading } = useAnalysis();
 
   const [text, setText]   = useState("");
+  const [transcript, setTranscript] = useState("");
   const [phone, setPhone] = useState("");
   const [url, setUrl]     = useState("");
   const [checking, setChecking] = useState(false);
@@ -30,7 +31,7 @@ function Analysis() {
   const [audioName, setAudioName] = useState("");
   const [imageName, setImageName] = useState("");
 
-  const filled = [audioName, imageName, text, phone, url].filter(Boolean).length;
+  const filled = [audioName, imageName, transcript, text, phone, url].filter(Boolean).length;
 
   const handleAnalyze = async () => {
     if (filled === 0 || isLoading) return;
@@ -39,6 +40,7 @@ function Analysis() {
     nav({ to: "/processing" });
     const result = await analyzeEvidence({
       audio: audioRef.current,
+      transcript: transcript || undefined,
       image: imageRef.current,
       text:  text || undefined,
       phone: phone || undefined,
@@ -139,6 +141,51 @@ function Analysis() {
             );
           })}
         </div>
+        {/* Transcript */}
+          <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="mt-4">
+            <GlassCard glow={transcript ? "var(--neon-cyan)" : undefined}>
+              <div className="mb-3 flex items-center gap-3">
+                <div
+                  className={cn(
+                    "grid h-10 w-10 place-items-center rounded-xl border transition",
+                    transcript
+                      ? "border-[color:var(--neon-cyan)] text-[color:var(--neon-cyan)]"
+                      : "border-white/10 text-muted-foreground"
+                  )}
+                >
+                  <AudioLines size={18} />
+                </div>
+
+                <div>
+                  <div className="text-sm font-semibold">
+                    Call Transcript
+                  </div>
+                  <div className="text-[11px] text-muted-foreground">
+                    Paste transcript instead of uploading audio
+                  </div>
+                </div>
+
+                {transcript && (
+                  <Check
+                    size={14}
+                    className="ml-auto text-[color:var(--neon-cyan)]"
+                  />
+                )}
+              </div>
+
+              <textarea
+                rows={6}
+                value={transcript}
+                onChange={(e) => setTranscript(e.target.value)}
+                className="text-mono w-full resize-none rounded-xl border border-white/10 bg-black/20 p-3 text-xs placeholder:text-muted-foreground focus:outline-none focus:border-white/30"
+                placeholder="Paste the scam call transcript here. If both audio and transcript are provided, the transcript will be used directly."
+              />
+
+              <div className="mt-2 flex justify-end text-[10px] text-muted-foreground">
+                {transcript.length} chars
+              </div>
+            </GlassCard>
+          </motion.div>
 
         {/* Text / Phone / URL cards */}
         <div className="mt-4 grid gap-4 md:grid-cols-3">
@@ -226,7 +273,7 @@ function Analysis() {
             <span>Live analysis — connected to Agent 4 orchestrator on <span className="text-mono text-foreground">:8000</span></span>
           </div>
           <div className="flex items-center gap-4">
-            <div className="text-mono text-xs text-muted-foreground">{filled} of 5 sources added</div>
+            <div className="text-mono text-xs text-muted-foreground">{filled} of 6 sources added</div>
             <button
               disabled={filled === 0 || isLoading}
               onClick={handleAnalyze}

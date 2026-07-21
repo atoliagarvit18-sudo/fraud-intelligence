@@ -194,7 +194,11 @@ class OrchestratorInput(BaseModel):
         default=None,
         description="Path to scam call audio file for Agent 3 analysis"
     )
-
+    transcript: Optional[str] = Field(
+        default=None,
+        description="Transcript of the scam call (optional). If provided, Whisper transcription is skipped."
+    )
+    
     # Agent 2 source mode & manual query inputs
     agent2_source: str = Field(
         default="mongodb",

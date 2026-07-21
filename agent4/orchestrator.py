@@ -203,7 +203,7 @@ def _get_agent2(inputs: OrchestratorInput) -> Optional[Dict[str, Any]]:
         result.setdefault("available", True)
         return result
 
-    if (inputs.currency_image_path or inputs.audio_path) and not (inputs.text or inputs.phone or inputs.url):
+    if (inputs.currency_image_path or inputs.audio_path) and not (inputs.text or inputs.transcript or inputs.phone or inputs.url):
         return {
             "available": False,
             "severity": "low",
@@ -219,7 +219,7 @@ def _get_agent2(inputs: OrchestratorInput) -> Optional[Dict[str, Any]]:
     return agent2_adapter.run(
         source=inputs.agent2_source,
         json_path=inputs.agent2_json_path,
-        query_text=inputs.text,
+        query_text=inputs.text or inputs.transcript,
         phone=inputs.phone,
     )
 
@@ -230,8 +230,11 @@ def _get_agent3(inputs: OrchestratorInput) -> Optional[Dict[str, Any]]:
         result.setdefault("available", True)
         return result
 
-    if inputs.audio_path:
-        return agent3_adapter.run(audio_path=inputs.audio_path)
+    if inputs.audio_path or inputs.transcript:
+        return agent3_adapter.run(
+            audio_path=inputs.audio_path,
+            transcript=inputs.transcript
+        )
 
     return {
         "available": False,

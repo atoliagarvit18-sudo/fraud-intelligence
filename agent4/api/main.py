@@ -47,6 +47,7 @@ from api.mapper import report_to_case                       # type: ignore
 def run_agent4(
     image_path: Optional[str] = None,
     audio_path: Optional[str] = None,
+    transcript: Optional[str] = None,
     location: Optional[str]   = None,
     agent2_source: str        = "mongodb",
     denom_hint: str           = "500",
@@ -55,6 +56,7 @@ def run_agent4(
     url: Optional[str]        = None,
 ) -> dict:
     """Thin wrapper that calls the orchestrator with correct field names."""
+    if not isinstance(transcript, str) or not transcript.strip(): transcript = None
     if not isinstance(text, str) or not text.strip(): text = None
     if not isinstance(phone, str) or not phone.strip(): phone = None
     if not isinstance(url, str) or not url.strip(): url = None
@@ -63,6 +65,7 @@ def run_agent4(
         "currency_denom_hint": denom_hint,
         "currency_location":   location or "Unknown",
         "audio_path":          audio_path,
+        "transcript":          transcript,
         "agent2_source":       agent2_source,
         "text":                text,
         "phone":               phone,
@@ -125,6 +128,7 @@ async def sample_case():
 async def analyze(
     session_id: str        = Form(default=""),
     audio:      UploadFile = File(default=None),
+    transcript: str        = Form(default=""),
     image:      UploadFile = File(default=None),
     text:       str        = Form(default=""),
     phone:      str        = Form(default=""),
@@ -168,6 +172,7 @@ async def analyze(
             lambda: run_agent4(
                 image_path=tmp_image,
                 audio_path=tmp_audio,
+                transcript=transcript,
                 agent2_source="mongodb",
                 text=text,
                 phone=phone,
@@ -184,7 +189,7 @@ async def analyze(
     except Exception as exc:
         _emit(sid, "SYSTEM", f"Live pipeline warning ({exc}) — switching to resilient fallback mode")
         try:
-            report = run_agent4(agent2_source="mock", text=text, phone=phone, url=url)
+            report = run_agent4(agent2_source="mock", transcript=transcript, text=text, phone=phone, url=url)
             case = report_to_case(report)
             _emit(sid, "FUSION", "Pipeline complete — building verdict...")
             _emit(sid, "SYSTEM", "__DONE__")

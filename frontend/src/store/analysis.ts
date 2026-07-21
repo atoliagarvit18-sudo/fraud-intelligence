@@ -12,6 +12,7 @@ interface AnalysisState {
   /** Upload evidence files → call API → update activeCase */
   analyzeEvidence: (payload: {
     audio?: File | null;
+    transcript?: string;
     image?: File | null;
     text?: string;
     phone?: string;
@@ -34,7 +35,7 @@ export const useAnalysis = create<AnalysisState>((set, get) => ({
   selectSample: (id) =>
     set((s) => ({ activeCase: s.history.find((c) => c.caseId === id) ?? s.history[0] })),
 
-  analyzeEvidence: async ({ audio, image, text, phone, url, onLog }) => {
+  analyzeEvidence: async ({ audio, transcript, image, text, phone, url, onLog }) => {
     set({ isLoading: true, error: null });
 
     const sessionId = crypto.randomUUID();
@@ -51,11 +52,12 @@ export const useAnalysis = create<AnalysisState>((set, get) => ({
       // POST evidence to /api/v1/analyze
       const form = new FormData();
       form.append("session_id", sessionId);
-      if (audio) form.append("audio", audio);
-      if (image) form.append("image", image);
-      if (text)  form.append("text", text);
-      if (phone) form.append("phone", phone);
-      if (url)   form.append("url", url);
+      if (audio)      form.append("audio", audio);
+      if (transcript) form.append("transcript", transcript);
+      if (image)      form.append("image", image);
+      if (text)       form.append("text", text);
+      if (phone)      form.append("phone", phone);
+      if (url)        form.append("url", url);
 
       const res = await fetch("/api/v1/analyze", { method: "POST", body: form });
       const data = await res.json();
