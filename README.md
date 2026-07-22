@@ -1,7 +1,7 @@
 <div align="center">
 
 # 🛡️ FCIS — Fraud Campaign Intelligence System
-### Autonomous Multi-Agent AI Super-Pipeline for Real-Time Cybercrime & Telecom Fraud Detection
+### Autonomous Multi-Agent AI System for Multi-Modal Cybercrime & Telecom Fraud Analysis
 
 [![ET AI Hackathon 2026](https://img.shields.io/badge/ET_AI_Hackathon-2026-F59E0B?style=for-the-badge&logo=trophy&logoColor=white)](https://economictimes.indiatimes.com/)
 [![Python 3.11+](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
@@ -12,7 +12,7 @@
 [![MongoDB](https://img.shields.io/badge/Database-MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)](https://mongodb.com)
 
 <p align="center">
-  <b>A state-of-the-art, multi-modal, 4-agent autonomous forensic intelligence engine designed to detect, correlate, and disrupt sophisticated Indian cybercrime campaigns, "Digital Arrests", telecom scams, and counterfeit operations in real time.</b>
+  <b>A state-of-the-art, multi-modal, 4-agent autonomous forensic intelligence engine designed to detect, analyze, and correlate sophisticated Indian cybercrime campaigns, "Digital Arrests", telecom scams, and counterfeit operations in real time.</b>
 </p>
 
 ---
@@ -23,7 +23,7 @@
 
 In India and across the globe, organized cybercrime has evolved into a industrial-scale enterprise. Fraud rings no longer rely on simple one-off phishing emails; they execute highly coordinated, **multi-modal campaigns** involving:
 * **"Digital Arrest" & Authority Impersonation:** Victims are terrorized via phone calls by syndicates posing as **CBI**, **Customs**, **Enforcement Directorate (ED)**, or **RBI** officers.
-* **Celebrity Impersonation & Social Engineering:** Deepfake voices, urgent money requests, and compromised social credentials targeting high-net-worth individuals and citizens.
+* **Celebrity Impersonation & Social Engineering:** Fraudsters impersonating public figures via phone calls, urgent money requests, and compromised social credentials targeting high-net-worth individuals and citizens.
 * **Counterfeit Currency & Forged KYC Documents:** Highly sophisticated physical currency counterfeits (`₹500` / `₹2000` notes) and altered Aadhaar/PAN cards used for money laundering and mule account creation.
 * **Cross-Platform OSINT Syndicates:** Coordinated job scams, part-time task traps, and investment fraud networks advertised simultaneously across **Telegram**, **Reddit**, and fraudulent domain clusters.
 
@@ -31,9 +31,9 @@ Traditional security systems analyze these vectors in silos—speech analyzers m
 
 ---
 
-## ⚡ Our Solution: The 4-Agent Autonomous AI Super-Pipeline
+## ⚡ Our Solution: Multi-Agent Intelligence Pipeline 
 
-**FCIS (Fraud Campaign Intelligence System)** solves this by unifying multi-modal digital forensics into a single, cohesive, autonomous AI ecosystem. When evidence (a call recording, a screenshot of a document or currency note, a suspicious SMS/WhatsApp text, a phone number, or a URL domain) is ingested, **four specialized autonomous agents** fire simultaneously to dissect, correlate, and build a court-ready prosecution package within seconds.
+**FCIS (Fraud Campaign Intelligence System)** solves this by unifying multi-modal digital forensics into a single, cohesive, autonomous AI ecosystem. When evidence (a call recording, a screenshot of a document or currency note, a suspicious SMS/WhatsApp text, a phone number, or a URL domain) is ingested, **four specialized autonomous agents** execute in parallel to produce a unified risk assessment and structured forensic report.
 
 ```mermaid
 graph TD
@@ -58,7 +58,7 @@ graph TD
     subgraph Actionable Outputs
         A4 -->|Bayesian Ensemble| V[⚖️ Actionable Severity Verdict<br/>CRITICAL / HIGH / MEDIUM / LOW]
         A4 -->|Entity Graph| G[🔗 Criminal Network Hypothesis Graph<br/>Linked Bank Accounts / UPI / Phones / IPs]
-        A4 -->|Forensic Generation| E[📄 Court-Ready Legal Evidence Package<br/>Compliant with IT Act & Indian Evidence Act]
+        A4 -->|Forensic Generation| E[📄 Structured Digital Forensic Report<br/>Designed with digital forensic reporting principles in mind.]
     end
 ```
 
@@ -67,32 +67,34 @@ graph TD
 ## 🧠 Deep-Dive: Architecture of the 4 Autonomous Agents
 
 ### 👁️ Agent 1: Visual Intelligence (Currency & ID Forensics)
-Agent 1 is an advanced vision and document forensic pipeline built to detect counterfeit currency notes (`₹500`, `₹2000`) and forged KYC identity documents (`Aadhaar`, `PAN`).
+Agent 1 is a vision and document forensic pipeline that flags visual indicators consistent with counterfeit currency notes (`₹500`, `₹2000`) and forged KYC identity documents (`Aadhaar`, `PAN`). It is designed as a triage/screening layer — surfacing images for human review — not a certified currency authentication system (which typically requires UV/IR imaging and physical security-thread inspection unavailable from a phone photo).
 * **Multi-Tier Computer Vision:** Leverages **OpenCV** for micro-texture, color spectrum distribution, and physical dimensions check, alongside a **Scikit-Learn Random Forest** classifier trained on authentic vs. counterfeit security features.
 * **Perceptual Cryptographic Hashing:** Computes exact **pHash**, **dHash**, and **aHash** signatures using `imagehash` to instantly cross-reference uploaded images against a live database of known counterfeit templates and previously reported scam flyers.
 * **OCR & Tamper Detection:** Extracts printed text and verifies structural alignment, detecting digital manipulation and font anomalies common in synthetic ID theft.
+Known limitation: detection accuracy depends heavily on image quality, lighting, and camera resolution; high-fidelity counterfeits may not be reliably distinguishable from a single RGB image.
 
 ### 🌐 Agent 2: OSINT Campaign & Text Intelligence
 Agent 2 monitors real-world threat feeds across the internet and calculates campaign velocity.
 * **Multi-Channel Scrapers & Ingestors:** Continuously scrapes and indexes reports from **Reddit** (`r/ScamsIndia`, `r/IsThisAScam`), **Telegram** fraud channels, and **National Cybercrime Reporting Portal (NCRP)** mock feeds.
-* **Density-Based Campaign Clustering (DBSCAN):** Uses **Sentence Transformers (`all-MiniLM-L6-v2`)** to convert incoming texts, phone numbers, and URLs into 384-dimensional dense semantic vectors. **DBSCAN** clusters these embeddings to prove whether an isolated user complaint is part of an active, nationwide cybercrime campaign involving dozens of linked reports (`campaign_score`).
-* **Deep Threat Extraction via Groq:** Powered by **Groq Llama-3.3-70B-Versatile**, it extracts complex threat topologies, financial identifiers (`UPI IDs`, `Bank Accounts`), and malicious domain patterns in sub-second latency.
+Note: OSINT ingestion targets public posts/channels for research and fraud-pattern monitoring; production deployment should respect each platform's API terms of service and applicable data-protection regulations.
+* **Density-Based Campaign Clustering (DBSCAN):** Uses **Sentence Transformers (`all-MiniLM-L6-v2`)** to convert incoming texts, phone numbers, and URLs into 384-dimensional dense semantic vectors. **DBSCAN** clusters these embeddings to determine whether an isolated user complaint is part of an active, nationwide cybercrime campaign involving dozens of linked reports (`campaign_score`).
+* **Deep Threat Extraction via Groq:** Powered by **Groq Llama-3.3-70B-Versatile**, it extracts complex threat topologies, financial identifiers (`UPI IDs`, `Bank Accounts`), and malicious domain patterns using Groq's low-latency inference capabilities.
 
 ### 🎙️ Agent 3: Speech & Call Intelligence (Telecom Fraud Analyzer)
-Agent 3 dissects live phone call recordings to expose psychological manipulation and synthetic voices.
+Agent 3 dissects live phone call recordings to expose psychological manipulation tactics and linguistic red flags used in scam calls.
 * **Multilingual Transcription:** Utilizes **OpenAI Whisper Base** (`faster-whisper`) to transcribe high-speed, low-fidelity telecom recordings in **English**, **Hindi**, and **Hinglish** (`code-mixed`).
 * **4-Layer Defense Engine:**
   1. **Keyword Trigger Engine:** Fast regex scanning for high-risk phrases (`CBI`, `Digital Arrest`, `Customs Parcel`, `OTP`, `ATM Pin`, `CVV`, `Celebrity Impersonation`).
   2. **Semantic Vector Matching:** Evaluates cosine similarity of call dialogue against a curated knowledge base of historical scam scripts using sentence embeddings.
-  3. **Acoustic & Deepfake Voice Analysis:** Uses **Librosa** to extract zero-crossing rate, pitch jitter, shimmer, and vocal stress features—flagging artificial cadence, voice cloning, and unnatural psychological stress markers.
+  3. **Acoustic Anomaly Scoring:** Uses Librosa to extract signal-level features (zero-crossing rate, RMS energy, pitch/energy variance) that flag unusual call-audio patterns — e.g. flat affect, irregular pacing, or scripted delivery. This is a heuristic signal that feeds the fusion score, not a deepfake or voice-clone detector; the system does not claim to determine whether a voice is AI-generated.
   4. **Groq Llama-3.1-8B-Instant Profiling:** Analyzes conversational tactics to identify specific psychological vectors (`Urgency/Fear Inducement`, `Authority Impersonation`, `Isolation Tactics`).
 
 ### 🧠 Agent 4: AI Fusion Engine, Graph Network & Legal Evidence Generator
 Agent 4 is the master orchestrator (`agent4/orchestrator.py`) that unifies all downstream intelligence into a single command center.
-* **Bayesian / Ensemble Correlation Engine (`correlator.py`):** Dynamically weights confidence intervals and risk scores across Agent 1 (`Vision`), Agent 2 (`OSINT`), and Agent 3 (`Speech`). If Agent 3 detects a "Digital Arrest" voice script and Agent 2 confirms the caller's phone number was reported 14 times on Reddit today, Agent 4 elevates the `composite_risk_score` to **98/100 (`CRITICAL`)**.
+* **Bayesian / Ensemble Correlation Engine (`correlator.py`):** Dynamically weights confidence intervals and risk scores across Agent 1 (`Vision`), Agent 2 (`OSINT`), and Agent 3 (`Speech`). The Fusion Engine combines outputs from all specialized agents using configurable weighted scoring. Evidence from speech, text, images, and OSINT sources contributes to a single composite risk assessment with an associated confidence score.
 * **Criminal Network Hypothesis Graph (`networkx`):** Automatically builds entity-relationship graphs linking phone numbers, bank accounts, UPI handles, cryptocurrency wallets, Telegram IDs, and IP addresses across disparate cases to map out the underlying criminal hierarchy (`network_graph.py`).
-* **Predictive Victimisation Modelling (`predictor.py`):** Calculates geographic spread and demographic targeting risk, forecasting potential financial exposure across vulnerable populations.
-* **Court-Ready Legal Evidence Package (`evidence_package.py`):** Generates immutable, timestamped forensic reports compliant with the **Indian Evidence Act** and **IT Act 2000**, complete with cryptographic hashes, chain of custody logs, and direct dispatch formats for **NCRP**, **CERT-In**, and **RBI**.
+* **Case Risk Prioritization (predictor.py):** Analyzes correlated evidence and network relationships to help investigators prioritize which linked cases warrant urgent follow-up.
+* **📄 Structured Digital Forensic Report (`evidence_package.py`):** Generates a structured forensic report containing evidence summaries, detected entities, confidence scores, timestamps, and analysis results from all four agents. When available, cryptographic hashes of uploaded evidence are included to support evidence integrity. The report is designed to assist investigators by consolidating findings into a clear, organized document for review and documentation.
 
 ---
 
@@ -102,8 +104,8 @@ Agent 4 is the master orchestrator (`agent4/orchestrator.py`) that unifies all d
 * **🌌 Stunning Glassmorphic UI:** Built with **React 18**, **TypeScript**, **Vite**, and **Tailwind CSS**. Features vibrant neon indicators (`#00F2FE` Cyan, `#8A2BE2` Violet, `#FF0055` Crimson), smooth **Framer Motion** animations, and intuitive interactive sliders.
 * **🛡️ Resilient Dual-Mode Execution:**
   * **Live Mode:** Fully leverages **Groq API (`Llama-3.3-70B` / `Llama-3.1-8B`)**, **OpenAI Whisper**, and **MongoDB Atlas** for live, real-world forensic execution.
-  * **Resilient Fallback Mode:** Engineered with bulletproof exception handling and ultra-fast precomputed/mock engines (`_load_precomputed`). If an API key expires, network drops, or Whisper model loading is interrupted during judging, the pipeline gracefully switches to offline fallback mode with zero downtime.
-* **⚡ Ultra-Low Latency:** Optimized to process full multi-modal evidence bundles (Audio + Image + Text + Graph correlation) in **under 3 seconds**.
+  * **Resilient Fallback Mode:** Engineered with robust exception handling and precomputed/mock engines (`_load_precomputed`). If external AI services are unavailable due to network issues, API limitations, or model loading failures, the system automatically switches to fallback responses, allowing demonstrations and testing to continue without interruption.
+* **⚡ Efficient Multi-Modal Processing:** Optimized for low-latency execution by running the specialized agents in parallel and consolidating their outputs through the Fusion Engine. Actual processing time depends on hardware configuration, input size, and external AI service response times.
 
 ---
 
@@ -178,7 +180,7 @@ Accepts multi-part form data containing any combination of evidence and executes
   * `text` *(string, optional)* — SMS, WhatsApp message, or email body.
   * `phone` *(string, optional)* — Suspect phone number (e.g., `+919876543210`).
   * `url` *(string, optional)* — Phishing URL or domain (`http://fake-cbi-portal.in`).
-* **Response:** Returns a comprehensive `CaseData` JSON containing individual agent verdicts, composite risk score, psychological breakdown, entity network graph, and legal evidence package.
+* **Response:** Returns a structured JSON response containing individual agent outputs, the fused risk assessment, detected entities, and generated analysis reports.
 
 ### `GET /api/v1/analyze/stream/{session_id}`
 Server-Sent Events (SSE) stream returning real-time log lines from `AGENT1`, `AGENT2`, `AGENT3`, `AGENT4`, `FUSION`, and `SYSTEM` during active pipeline processing.
@@ -190,7 +192,7 @@ Returns live diagnostics, active model verification (`Whisper`, `SentenceTransfo
 
 ## 🧪 Built-In Sample Cases for Testing
 
-The dashboard comes pre-loaded with realistic, verified forensic sample cases that you can run with **1-Click** right from the UI:
+The dashboard comes pre-loaded with realistic, representative sample cases that you can run with **1-Click** right from the UI:
 1. **Digital Arrest & CBI Impersonation Call:** High-risk audio + transcript featuring scammers posing as CBI/ED officers threatening immediate arrest over fabricated Aadhaar money laundering charges.
 2. **Celebrity Impersonation & Card Fraud:** Social engineering transcript involving celebrity impersonation asking for urgent ATM card numbers and CVV codes.
 3. **Counterfeit ₹500 / ₹2000 Currency Note:** Visual forensic sample demonstrating micro-texture failure and perceptual hash match against known counterfeit networks.
